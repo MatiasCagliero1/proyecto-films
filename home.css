@@ -33,13 +33,13 @@ grid-template-rows: 16px 100px;
 .eachmovie{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .cat-title {
   color: white;
   font-size: 1.3em;
-  margin: 1rem 0rem 0.8rem 1.8rem;
+  margin: 0.8rem 0rem 0.4rem 1.8rem;
 }
 .line-movies{
   display: inline-flex;
@@ -50,7 +50,7 @@ grid-template-rows: 16px 100px;
 .movies {
   width: 19em;
   height: 11rem;
-  border-radius: .8rem;
+  border-radius: 8px;
   background-color: black;
   margin: 0 0 0 .4em;
   color: white;
@@ -61,6 +61,8 @@ grid-template-rows: 16px 100px;
   background-color: black;
   transition: .3s;
   transform: scale(1.09);
+  background-image: url("/Assets/Peliculas/Miniaturas/767382e39c96cba9583b02fffb9843bc0b2f9f811189c1be92886ab4fc8a0d94._UR1920\,1080_RI_SX356_FMwebp_.webp");
+
 }
 
 img:after {
