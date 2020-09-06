@@ -1,10 +1,10 @@
 /* NAV */
 nav {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: 15%;
 
 }
 
@@ -12,20 +12,16 @@ nav {
     display: grid;
     grid-template-columns: 30% 70%;
     align-items: center;
-height: 100%;
 }
-
 
 .navdiv img {
     width: 80px;
     margin-left: 50px;
 }
 
-.links {
-  
-}
+.links {}
 
-.links a{
+.links a {
     font-size: 1.1em;
     font-weight: 600;
     color: white;
@@ -33,20 +29,38 @@ height: 100%;
     margin: 0 0.3em 0 0.3em;
 }
 
-
 .link:hover {
     color: rgb(184, 184, 184);
     text-decoration: none;
     transition: .1s;
 }
 
-.search{
+.search {
     display: grid;
-    justify-content: end;
-    margin-right: 100px;
+    grid-template-columns: 55% 30%;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
 }
 
-.search input{
-   width: 500px;
-   border-radius: 5px;
+.search input {
+    height: 35px;
+    border-radius: 5px;
+}
+
+.profile{
+display: grid;
+grid-template-columns: 12% 40% 20%;
+align-items: center;
+justify-content: center;
+}
+
+.search img {
+    border-radius: 50%;
+}
+
+.search p {
+    font-size: 15px;
+    font-weight: 550;
+    margin: 0px 0px 0px 20px;
 }
