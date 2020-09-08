@@ -39,7 +39,8 @@ grid-template-rows: 16px 100px;
 .cat-title {
   color: white;
   font-size: 1.3em;
-  margin: 0.8rem 0rem 0.4rem 1.8rem;
+  font-weight: 510;
+  margin: 0.9rem 0rem 0.6rem 1.8rem;
 }
 .line-movies{
   display: inline-flex;
@@ -80,5 +81,6 @@ footer{
 
 footer h1,p{
   color: white;
+  margin: 0%;
 }
 
