@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Cinemark </title>
+    <title>Home | Movie Rank </title>
 
     <!--Boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -71,35 +71,50 @@
             <h2 class="cat-title">Top 5 en Argentina</h2>
 
             <div class="eachmovie">
+
+                <div class="ext">
+
+                    <div>
+                        <img class="movies"
+                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                            alt="First Photo">
+                    </div>
+
+
+                    <div class="hiddenext" id="hidden">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div class="ext">
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                        <div class="hiddenext">
-                            <p>Breve resumen de la pelicula</p>
-                        </div>
+                    <div>
+                        <p>Breve resumen de la pelicula</p>
+                    </div>
                 </div>
                 <div class="ext">
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                        <div>
-                            <p>Breve resumen de la pelicula</p>
-                        </div>
-                </div><div class="ext">
+                    <div>
+                        <p>Breve resumen de la pelicula</p>
+                    </div>
+                </div>
+                <div class="ext">
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                        <div>
-                            <p>Breve resumen de la pelicula</p>
-                        </div>
-                </div><div class="ext">
-                    <img class="movies"
-                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                        alt="First Photo">
-                        <div>
-                            <p>Breve resumen de la pelicula</p>
-                        </div>
+                    <div>
+                        <p>Breve resumen de la pelicula</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,11 +161,20 @@
     <!--Footer-->
     <footer>
         <h1>Udesa</h1>
-        <p>info@cinemark.com</p>
-        <p>© 2020 Cinemark.com</p>
+        <p>info@movierank.com</p>
+        <p>©2020 Movie Rank</p>
     </footer>
 
+
     <!-- Script -->
+
+    <script>
+        document.getElementsByClassName("movie").addEventListener("mouseover", function () {
+            document.getElementById("#hidden").innerHTML = sometext;
+        });
+    </script>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

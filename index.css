@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(4, 5, 8, 0.904)!important;
+  background-color: rgba(4, 5, 8, 0.904) !important;
 }
 
 .cuadrado_1 {
@@ -18,19 +18,19 @@ body {
 }
 
 /* Img Portada */
-section img{
-width: 100%;
-height: 280px;
+section img {
+  width: 100%;
+  height: 280px;
 
 }
 
 /* Movies */
 .movigroup {
-display: grid;
-grid-template-rows: 16px 100px;
+  display: grid;
+  grid-template-rows: 16px 100px;
 }
 
-.eachmovie{
+.eachmovie {
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-content: space-around;
@@ -42,31 +42,62 @@ grid-template-rows: 16px 100px;
   font-weight: 510;
   margin: 0.9rem 0rem 0.6rem 1.8rem;
 }
-.line-movies{
+
+.line-movies {
   display: inline-flex;
   margin: 0em 1em 0 1em;
   padding: 0.5rem;
 }
 
-.ext:hover{
-  display: grid;
-  grid-template-rows: 70% 25%;
-  justify-content: center;
-  background-color: red;
-  height: 140%;
-  width: 19em;
-  transform: scale(1.09);
-  border-radius: 8px 8px 0px 0px ;
+
+.hidden:hover{
+  display: none;
 }
 
-.hidenext{
-  visibility: hidden;
+.ext {
+  width: 19em;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.ext:hover {
+  transform: scale(1.09);
+  border-radius: 8px 8px 0px 0px;
+  transition: 0.5s;
+}
+
+
+.insidemovie {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #000;
+}
+
+.hiddenext h4 {
+  color: rgba(92, 92, 92, 0.911);
+  font-weight: 600;
+  background-color: rgb(119, 119, 119);
+  margin: 0%;
+}
+
+.hiddenext p {
+  background-color: chocolate;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.hiddenext article {
+  background-color: rgb(140, 11, 226);
+  font-weight: 600;
 }
 
 .movies {
   width: 19em;
   height: 11rem;
-  border-radius: 8px 8px 0px 0px ;
+  border-radius: 8px 8px 0px 0px;
   background-color: black;
   color: white;
   font-weight: 546;
@@ -75,21 +106,21 @@ grid-template-rows: 16px 100px;
 .movies:hover {
   border: 1px solid #000;
   transition: .3s;
-/*   transform: scale(1.09); */
+  /*   transform: scale(1.09); */
 }
 
 
 /*Footer*/
-footer{
+footer {
   text-align: center;
-  background:#0a0a0a6e;
+  background: #0a0a0a6e;
   margin-top: 30px;
   color: white;
 }
 
-footer h1,p{
+footer h1,
+p {
   color: white;
   padding: 10px 0px 10px 0px;
   margin: 0%;
 }
-
