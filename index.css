@@ -33,7 +33,7 @@ grid-template-rows: 16px 100px;
 .eachmovie{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .cat-title {
@@ -48,28 +48,36 @@ grid-template-rows: 16px 100px;
   padding: 0.5rem;
 }
 
+.ext:hover{
+  display: grid;
+  grid-template-rows: 70% 25%;
+  justify-content: center;
+  background-color: red;
+  height: 140%;
+  width: 19em;
+  transform: scale(1.09);
+  border-radius: 8px 8px 0px 0px ;
+}
+
+.hidenext{
+  visibility: hidden;
+}
+
 .movies {
   width: 19em;
   height: 11rem;
-  border-radius: 8px;
+  border-radius: 8px 8px 0px 0px ;
   background-color: black;
-  margin: 0 0 0 .4em;
   color: white;
+  font-weight: 546;
 }
 
 .movies:hover {
   border: 1px solid #000;
-  background-color: black;
   transition: .3s;
-  transform: scale(1.09);
-  background-image: url("/Assets/Peliculas/Miniaturas/767382e39c96cba9583b02fffb9843bc0b2f9f811189c1be92886ab4fc8a0d94._UR1920\,1080_RI_SX356_FMwebp_.webp");
-
+/*   transform: scale(1.09); */
 }
 
-img:after {
-  content: " -- MOVIE PHOTO";
-  color: rgb(253, 21, 21);
-}
 
 /*Footer*/
 footer{
@@ -81,6 +89,7 @@ footer{
 
 footer h1,p{
   color: white;
+  padding: 10px 0px 10px 0px;
   margin: 0%;
 }
 
