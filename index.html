@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Movie Rank </title>
 
-    <!--Boostrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit-icons.min.js"></script>
-
     <!--Stylesheet-->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 
+<!-- Preguntas
+Problemas con display None
+Texto No Responsive -->
 
 <body>
 
@@ -32,7 +24,7 @@
         <nav>
             <div class="navdiv">
 
-                <img src="/Assets/Icons/kisspng-computer-icons-billboard-x.png" alt="">
+                <img class="logo" src="/Assets/Icons/kisspng-computer-icons-billboard-x.png" alt="">
 
                 <div class="links">
                     <a href="/1_Home/index.html" class="link">Inicio</a>
@@ -62,26 +54,22 @@
 
     <section>
 
-        <img src="/Assets/Peliculas/Franjas/The boys.jpg" alt="">
+        <img class="banner" src="/Assets/Peliculas/Franjas/The boys.jpg" alt="">
 
 
-        <!--Movies-->
+        <!--Movies Line 1-->
         <div class="moviegroup">
 
             <h2 class="cat-title">Top 5 en Argentina</h2>
 
             <div class="eachmovie">
-
                 <div class="ext">
 
-                    <div>
-                        <img class="movies"
-                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                            alt="First Photo">
-                    </div>
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
 
-
-                    <div class="hiddenext" id="hidden">
+                    <div class="hiddenext">
                         <div class="insidemovie">
                             <h4>Movie Name</h4>
                             <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
@@ -89,101 +77,329 @@
                             <article>Barra NAv</article>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="ext">
+
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                    <div>
-                        <p>Breve resumen de la pelicula</p>
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
                     </div>
                 </div>
+
                 <div class="ext">
+
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                    <div>
-                        <p>Breve resumen de la pelicula</p>
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
                     </div>
                 </div>
+
                 <div class="ext">
+
                     <img class="movies"
                         src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
                         alt="First Photo">
-                    <div>
-                        <p>Breve resumen de la pelicula</p>
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--Movies Line 2-->
         <div class="moviegroup">
 
             <h2 class="cat-title">Recomedadas para Vos</h2>
 
             <div class="eachmovie">
-                <img class="movies" src="" alt="First Photo">
-                <img class="movies" src="" alt="Second Photo">
-                <img class="movies" src="" alt="Third Photo">
-                <img class="movies" src="" alt="Four Photo">
-            </div>
+                <div class="ext">
 
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <!--Movies Line 3-->
         <div class="moviegroup">
 
             <h2 class="cat-title">Tendencia de esta semana</h2>
 
             <div class="eachmovie">
-                <img class="movies" src="" alt="First Photo">
-                <img class="movies" src="" alt="Second Photo">
-                <img class="movies" src="" alt="Third Photo">
-                <img class="movies" src="" alt="Four Photo">
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!--Movies Line 4-->
         <div class="moviegroup">
 
             <h2 class="cat-title">Ultimos Estrenos</h2>
 
             <div class="eachmovie">
-                <img class="movies" src="" alt="First Photo">
-                <img class="movies" src="" alt="Second Photo">
-                <img class="movies" src="" alt="Third Photo">
-                <img class="movies" src="" alt="Four Photo">
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ext">
+
+                    <img class="movies"
+                        src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
+                        alt="First Photo">
+
+                    <div class="hiddenext">
+                        <div class="insidemovie">
+                            <h4>Movie Name</h4>
+                            <p>Lorem ipsum dolor sit eveniet deleniti quaerat quo repu, quod eos dolores ullam. Quos
+                                nihil suscipit voluptate nemo corporis?</p>
+                            <article>Barra NAv</article>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
+       
+        </div>
     </section>
 
 
     <!--Footer-->
     <footer>
-        <h1>Udesa</h1>
-        <p>info@movierank.com</p>
-        <p>©2020 Movie Rank</p>
+
+
+        <!--Redes Sociales-->
+
+        <h3>Redes Sociales</h3>
+
+
+        <section class="networks">
+
+            <a href="https://www.instagram.com/"> <img class="eachnetwork" href="google.com"
+                    src="https://static.wixstatic.com/media/da7ef6dd1302486c9a67baebe4b364bc.png/v1/fill/w_37,h_37,al_c,q_85,usm_0.66_1.00_0.01/da7ef6dd1302486c9a67baebe4b364bc.webp"
+                    alt="Icono-Instagram"></a>
+
+            <a href="https://www.facebook.com"> <img class="eachnetwork"
+                    src="https://static.wixstatic.com/media/e0678ef25486466ba65ef6ad47b559e1.png/v1/fill/w_37,h_37,al_c,q_85,usm_0.66_1.00_0.01/e0678ef25486466ba65ef6ad47b559e1.webp"
+                    alt="Icono-Facebook"> </a>
+        </section>
+
+        <!--Contacto-->
+        <section class="contacto">
+
+            <a href="https://wa.me/1168934321">
+                <p>WhatsApp: +54 9 11 6893-4321</p>
+            </a>
+
+            <div class="divisor"></div>
+
+            <a href="https://wa.me/5491136112732">
+                <p>Atencion al Cliente: 4952-3468 </p>
+            </a>
+
+            <div class="divisor"></div>
+
+
+            <a href="https://wa.me/5491136112732">
+                <p>Email: info@movierank.com</p>
+            </a>
+
+
+        </section>
+
+        <!--FIN Contacto-->
+
+        <p class="copyrigth">
+            © Copyrigth 2020 Movie Rank S.A.
+        </p>
+
     </footer>
 
-
-    <!-- Script -->
-
-    <script>
-        document.getElementsByClassName("movie").addEventListener("mouseover", function () {
-            document.getElementById("#hidden").innerHTML = sometext;
-        });
-    </script>
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>
