@@ -1,11 +1,15 @@
 /* NAV */
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(4, 5, 8, 0.904);
+    margin: 0% 0% 0% 0%;
+}
+
 
 nav {
     display: grid;
     grid-template-columns: 45% 55%;
     justify-content: space-between;
-    align-items: center;
-    height: 60px;
 }
 
 .navdiv {

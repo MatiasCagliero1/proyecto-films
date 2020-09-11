@@ -17,39 +17,15 @@ body {
     padding: 30px 20px 18px 20px;
   }
   
-  /* NAV */
-  nav{
-  height: 4.5rem;
-  }
-  
-  .link {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    margin: 0 0.3em 0 0.3em;
-  }
-  
-  .link:hover {
-  color: rgb(184, 184, 184);
-  text-decoration: none;
-  transition: .1s;
-  }
+
   
   hr{
     width: 20%;
     background-color: white;
   }
   
-  footer{ 
-    color: white !important;
-    text-align: center;
-    background:#0a0a0a6e;
-  }
+
   
-  .footer{
-    margin-bottom: 0rem;
-  }
   .titulopag{
     border: 3px solid white;
     background-color: white;

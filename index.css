@@ -67,11 +67,13 @@ body {
 
 
 .hiddenext {
-  display: none;
+  height: 0px ;
+  opacity: 0;
 }
 
-.hiddenext:hover {
-  visibility: visible;
+.ext:hover .hiddenext {
+  height: 150px ;
+  opacity: 1;
 }
 
 .insidemovie {
