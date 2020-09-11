@@ -71,7 +71,7 @@ body {
 }
 
 .hiddenext:hover {
-  display: block;
+  visibility: visible;
 }
 
 .insidemovie {

@@ -11,12 +11,13 @@ nav {
 .navdiv {
     display: grid;
     grid-template-columns: 30% 70%;
+    justify-content: space-around;
     align-items: center;
 }
 
-.logo {
-    width: 45px;
-    margin-left: 50px;
+svg {
+    width: 60%;
+    margin: 0px 0px 0px 20%;
 }
 
 .links a {
@@ -68,12 +69,13 @@ input[type=text]:focus {
 
 .search img {
     border-radius: 50%;
-    width: 100%;
+    width: 2.56em;
 }
 
-.search p {
+.search a {
     font-size: 15px;
     font-weight: 550;
     margin: 0px 0px 0px 20px;
     color: white;
+    text-decoration: none;
 }
