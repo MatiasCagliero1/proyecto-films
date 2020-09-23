@@ -4,9 +4,9 @@ header{
     margin: 5px 0% 5px 0%;
 }
 
-
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0px 1% 0px 1%;
 }
@@ -51,9 +51,6 @@ svg {
     padding: 18px;
     color: rgba(199, 199, 199, 0.829);
     background-color: rgba(0, 0, 0, 0.452);
-    /* background-image: url('/Assets/Icons/search-black-18dp.svg');
-    background-repeat: no-repeat;
-    background-position: 10px 10px; */
 }
 
 input[type=text]:focus {
@@ -63,8 +60,8 @@ input[type=text]:focus {
 
 .profile {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
     margin: 0em 2em 0em 2em;
 }
 
@@ -76,7 +73,39 @@ input[type=text]:focus {
 .search a {
     font-size: 15px;
     font-weight: 550;
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 40px;
     color: white;
     text-decoration: none;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1024px) {
+
+    nav {
+        display: flex;
+        
+    flex-wrap: nowrap;
+        margin: 0px 1% 0px 1%;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0em 2em 0em 2em;
+    }
+
+
+    .search a {
+        font-size: 15px;
+        font-weight: 550;
+        margin: 0px 0px 0px 20px;
+        color: white;
+        text-decoration: none;
+    }
+
 }
