@@ -16,4 +16,129 @@ body {
     width: 100%;
     padding: 30px 20px 18px 20px;
   }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(4, 5, 8, 0.904);
+    margin: 0%;
+  }
+  
+  /* Img Portada */
+  .banner {
+    width: 100%;
+  }
+  
+  
+  /* Movies */
+  .movigroup {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cat-title {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 510;
+    margin: 0.9rem 0rem 0.6rem 1.8rem;
+  }
+  
+  .eachmovie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .line-movies {
+    display: inline-flex;
+    margin: 0em 1em 0 1em;
+    padding: 0.5rem;
+  }
+  
+  .ext {
+    width: 19em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(141, 140, 140, 0.527);
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .ext:hover {
+    transform: scale(1.09);
+    border-radius: 8px 8px 0px 0px;
+    transition: 0.5s;
+  }
+  
+  .hiddenext {
+  display: none;
+  }
+  
+  /* .hiddenext {
+    height: 0px ;
+    opacity: 0;
+  }
+  
+  .ext:hover .hiddenext {
+    height: 150px ;
+    opacity: 1;
+  } */
+  
+  .insidemovie {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #000;
+  }
+  
+  
+  .hiddenext h4 {
+    color: rgba(92, 92, 92, 0.911);
+    font-weight: 600;
+    background-color: rgb(119, 119, 119);
+    margin: 0%;
+  }
+  
+  .hiddenext p {
+    background-color: chocolate;
+    font-weight: 500;
+    font-size: 1em;
+  }
+  
+  .hiddenext article {
+    background-color: rgb(140, 11, 226);
+    font-weight: 600;
+  }
+  
+  .movies {
+    width: 19em;
+    height: 11rem;
+    border-radius: 8px 8px 0px 0px;
+    background-color: black;
+    color: white;
+    font-weight: 546;
+  }
+  
+  .movies:hover {
+    border: 1px solid #000;
+    transition: .3s;
+    /*   transform: scale(1.09); */
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+  
+    .banner {
+      width: 100%;
+      height: 280px;
+    }
+  
+    .ext {
+      margin: 1em 0em 1em 0em;
+    }
+  }
+  
+  
+  
+  @media only screen and (min-width: 1024px) {
+  }
   
