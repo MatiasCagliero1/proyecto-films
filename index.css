@@ -92,7 +92,7 @@ display: none;
 .movies {
   width: 19em;
   height: 11rem;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px;
   background-color: black;
   color: white;
   font-weight: 546;
