@@ -6,7 +6,7 @@ body {
 
   
   .titulopag{
-    border: 3px solid white;
+    border: 3px double black;
     background-color: white;
     width: 250px;
     display: block;
@@ -19,6 +19,7 @@ body {
     padding-bottom: 20px;
     border-radius: 20px;
     margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
   .containmovie{
     display: grid;
@@ -30,7 +31,8 @@ body {
     height: 460px;
     margin-top: 50px;
     margin-bottom: 30px;
-    border: solid white;
+    border: double white;
+    background-color: black;
   }
   .foto{
     width: 500px;
@@ -38,4 +40,36 @@ body {
     padding-top: 30px;
     padding-right: 20px;
     margin-bottom: 0px;
+  }
+  .nombreserie{
+    font-size: 50px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
+    width: 330px;
+    height: 100px;
+    border: double;
+    padding-top: 30px;
+  }
+  .nombrecreador{
+    font-size: 35px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 40px;
+  }
+  .fotoplay{
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+  }
+  .simbolo{
+    color: white;
+    padding-top: 10px;
+    margin: 0px;
+  }
+  .playmovie{
+    display: grid;
+    grid-template-columns: 70px 140px;
+    font-size: 25px;
+    margin-top: 50px;
   }
