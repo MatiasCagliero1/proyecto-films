@@ -1,19 +1,56 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(4, 5, 8, 0.904);
-  margin: 0% 0% 0% 0%;
-}
-  .cuadrado_1 {
-    position: relative;
-    width: 100%;
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 0px 0px 0px 0px;
-    transition: .5s;
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(4, 5, 8, 0.904);
+    margin: 0%;
   }
   
-  .cuadrado_2 {
-    position: relative;
-    width: 100%;
-    padding: 30px 20px 18px 20px;
+  .cat-title {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 510;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+
+  /* Cuadrados Categorias */
+  .eachmovie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .ext {
+    width: 25em;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(141, 140, 140, 0.527);
+    border-radius: 8px 8px 0px 0px;
+    background-color: black;
+  }
+  
+  .ext:hover {
+    transform: scale(1.09);
+    border-radius: 8px 8px 0px 0px;
+  border: 1px solid rgb(206, 202, 202);
+  transition: .3s;
+  }
+
+  .divcategorias { 
+    font-size: 1.8em;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  @media only screen and (min-width: 768px) {
+
+    .ext {
+      margin: 1em 0em 1em 0em;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
   }
   

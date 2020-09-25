@@ -90,6 +90,7 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     margin: 1em 0% 0% 0%;
+    text-decoration: none;
   }
 
   .copyrigth{
