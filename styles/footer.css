@@ -1,5 +1,7 @@
 /*Footer*/
 footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background: #0a0a0ad5;
   padding: 1em ;
@@ -25,24 +27,24 @@ footer h3 {
   margin: 0px 0px 0px 10px
 }
 
-.contacto {
+section .rowalign {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 1em 0% 0% 1%;
+  margin: 0%;
 }
 
-footer h3 {
-  text-align: center;
+
+footer h4 {
+  text-align: left;
+  margin-top: 1em;
 }
 
-.contacto p {
+.rowalign a {
   width: 100%;
   font-size: 1em;
   line-height: 1.7em;
-  flex-direction: column;
-  flex-wrap: wrap;
   margin: 0px 0px 0px 0px;
   text-decoration: none;
   color: white;
@@ -50,7 +52,7 @@ footer h3 {
 
 .copyrigth {
   font-size: 70%;
-  padding: 16px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -65,32 +67,26 @@ footer{
   padding: 1em 0em 0.5em 0em;
 }
 
-  footer h3{
+  footer h3, h4{
     display: flex;
     justify-content: center;
     text-align: left;
     color: white;
     margin: 0px 0px 10px 0px
   }
-  
-  .divisor {
-    border-left: 5px solid white;
-  
-  }
-
+ 
   .networks {
     flex-direction: row;
     justify-content: center;
     margin: 0% 5% 0% 5%;
   }
 
-  .contacto {
+  .rowalign {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 1em 0% 0% 0%;
-    text-decoration: none;
+   justify-content: space-around;
+    margin: 0em 0% 0% 0%;
   }
 
   .copyrigth{
