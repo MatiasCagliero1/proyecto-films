@@ -71,15 +71,21 @@ body {
   }
   .simbolo{
     color: white;
-    padding-top: 5px;
     margin: 0px;
-    font-size: 20px;
+    font-size: 15px;
+  }
+  .duracion{
+    color: white;
+    margin: 0px;
+    padding-left: 10px;
+    font-size: 15px;
   }
   .playmovie{
     display: grid;
-    grid-template-columns: 70px 140px;
+    grid-template-columns: 60px 60px 100px;
+    grid-template-rows: 60px;
     font-size: 25px;
-    margin-top: 40px;
+    margin-top: 55px;
     margin-bottom: 35px;
   }
   @media only screen and (min-width: 768px) {
@@ -159,15 +165,25 @@ body {
     .simbolo{
       padding-top: 10px;
       margin: 0px;
+      font-size: 20px;
+    }
+    .duracion{
+      font-size: 20px;
+      padding-left: 15px;
+      padding-top: 10px;
     }
     .playmovie{
+      display: grid;
+      grid-template-columns: 60px 100px 200px;
+      grid-template-rows: 60px;
       font-size: 25px;
       margin-top: 50px;
+      margin-bottom: 35px;
       padding-left: 25px;
     }
     }
 
-    @media only screen and (min-width: 999px){
+    @media only screen and (min-width: 1024px){
 
       .titulopag{
           width: 220px;
@@ -209,10 +225,20 @@ body {
       .simbolo{
         padding-top: 10px;
         margin: 0px;
+        font-size: 25px;
+      }
+      .duracion{
+        font-size: 25px;
+        padding-left: 55px;
+        padding-top: 10px;
       }
       .playmovie{
+        display: grid;
+        grid-template-columns: 60px 130px 300px;
+        grid-template-rows: 60px;
         font-size: 25px;
-        margin-top: 50px;
+        margin-top: 55px;
+        margin-bottom: 35px;
         padding-left: 25px;
       }
     }
