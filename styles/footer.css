@@ -21,9 +21,11 @@ footer h3 {
   display: flex;
   justify-content: flex-start;
   margin-top: 0.8em;
+  list-style:none;
 }
 
 .eachnetwork {
+  width: 2.3em;
   margin: 0px 10px 0px 0px
 }
 
@@ -79,8 +81,8 @@ h4 {
     padding: 1em 0em 0.5em 0em;
   }
 
-  footer h3,
-  h4 {
+  footer h4 {
+    font-size: 1.2em;
     color: white;
     margin: 0px 0px;
   }
@@ -88,13 +90,13 @@ h4 {
   .networks {
     flex-direction: row;
     justify-content: center;
-    margin: 1em 0px;
+    margin: 0.9em 0px;
   }
 
   .rowalign {
     flex-direction: row;
     justify-content: space-around;
-    margin: 18px 0px 1em 0px;
+    margin: 0px 0px 1em 0px;
   }
 
   .rowalign p {

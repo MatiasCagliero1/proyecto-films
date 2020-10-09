@@ -5,15 +5,13 @@ body {
 }
 
 /* Img Portada */
-.banner {
-  width: 100%;
+.Slideshow {
+ height: 17em;
 }
 
-
 /* Movies */
-.movigroup {
-  display: flex;
-  flex-wrap: wrap;
+.moviesegment{
+  margin: 0em 0em;
 }
 
 .cat-title {
@@ -25,8 +23,10 @@ body {
 
 .eachmovie {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
+  margin: 0em;
+  padding: 0ch;
 }
 
 .line-movies {
@@ -116,10 +116,13 @@ display: none;
 }
 
 @media only screen and (min-width: 768px) {
-
-  .ext {
-    margin: 1em 1em;
+  
+  .eachmovie {
+    margin: 0em;
+    padding: 0ch;
   }
+  
+
 }
 
 
@@ -128,25 +131,13 @@ display: none;
     width: 100%;
     height: 280px;
   }
-
-  .ext {
-    margin: 1em 0em 1em 0em;
+  .eachmovie {
+    margin: 0em;
+    padding: 0ch;
   }
+  
+ 
 }
 
 
 
-
-/* Botón Whatsapp */
-.wapcall {
-  width: 5em;
-  position: absolute;
-  left: 90%;
-}
-
-.wapcall img {
-  position: relative;
-  width: 5em;
-
-
-  }

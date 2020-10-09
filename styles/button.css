@@ -1,0 +1,15 @@
+
+/* Botón Whatsapp */
+.wapcall {
+    width: 5em;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+  }
+  
+  .wapcall img {
+    /* position: relative; */
+    width: 5em;
+  
+  
+    }
