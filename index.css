@@ -133,3 +133,20 @@ display: none;
     margin: 1em 0em 1em 0em;
   }
 }
+
+
+
+
+/* Botón Whatsapp */
+.wapcall {
+  width: 5em;
+  position: absolute;
+  left: 90%;
+}
+
+.wapcall img {
+  position: relative;
+  width: 5em;
+
+
+  }
