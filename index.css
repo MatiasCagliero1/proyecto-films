@@ -5,57 +5,85 @@ body {
 }
 
 /* Img Portada */
-.Slideshow {
- height: 17em;
+.carrusel {
+  height: 18em;
+  margin: 0%;
+}
+
+
+.carrusel:focus,
+.Slideshow:focus {
+  border: none;
 }
 
 /* Movies */
-.moviesegment{
-  margin: 0em 0em;
+.moviesegment {
+  margin: 0em 0em 0em 2em ;
 }
 
 .cat-title {
   color: white;
   font-size: 1.3em;
   font-weight: 510;
-  margin: 0.9rem 0rem 0.6rem 1.8rem;
+  margin: 1.5rem 0rem 1.2rem 0rem;
+}
+
+.moviesline ul {
+  margin: 0%;
+  padding: 0%;
+}
+
+.ext {
+  background-color: rgba(0, 0, 0, 0.527);
+  border-radius: 8px 8px;
+  margin: 0em 0.2em;
 }
 
 .eachmovie {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0em;
-  padding: 0ch;
-}
-
-.line-movies {
-  display: inline-flex;
-  margin: 0em 1em 0 1em;
-  padding: 0.5rem;
-}
-
-.ext {
-  width: 19em;
-  height: 11rem;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.527);
-  border-radius: 8px 8px;
-  margin: 1em 1em;
+  width: 19em;
+  height: 11rem;
 }
 
-.ext:hover {
+.eachmovie:hover {
   transform: scale(1.08);
   transition: 0.5s;
+  background: #000;
   border: 1px solid rgb(223, 223, 223);
   transition: .3s;
 }
 
+.eachmovie:focus {
+  border: none;
+}
+
+/* Icono Carga */
+svg {
+  margin: 0%;
+}
+
+
+.uk-slidenav {
+}
+
+.uk-position-small {
+  max-width: 1.5em;
+  margin: 2.4em 0em;
+  border-radius: 5px 0px 0px 5px;
+  padding: 4.2em 1em;
+}
+
+.uk-position-small:hover {
+  color: rgb(26, 5, 218);
+  background: rgba(87, 87, 87, 0.164);
+}
+
+/* Ampliación Peliculas */
 .hiddenext {
-display: none;
+  display: none;
 }
 
 /* .hiddenext {
@@ -66,7 +94,7 @@ display: none;
 .ext:hover .hiddenext {
   height: 150px ;
   opacity: 1;
-} */
+} 
 
 .insidemovie {
   display: flex;
@@ -94,50 +122,14 @@ display: none;
   font-weight: 600;
 }
 
-.movies {
-  width: 19em;
-  height: 11rem;
-  border-radius: 8px 8px;
-  background-color: black;
-  color: white;
-  font-weight: 546;
-}
-
-.movies:hover {
-  border: 1px solid #000;
-  transition: .3s;
-  /*   transform: scale(1.09); */
-}
-
-.movietext{
+.movietext {
   font-size: 5em;
   font-weight: 300;
   color: white;
 }
+*/
 
-@media only screen and (min-width: 768px) {
-  
-  .eachmovie {
-    margin: 0em;
-    padding: 0ch;
-  }
-  
-
-}
+@media only screen and (min-width: 768px) {}
 
 
-@media only screen and (min-width: 1024px) {
-  .banner {
-    width: 100%;
-    height: 280px;
-  }
-  .eachmovie {
-    margin: 0em;
-    padding: 0ch;
-  }
-  
- 
-}
-
-
-
+@media only screen and (min-width: 1134px) {}

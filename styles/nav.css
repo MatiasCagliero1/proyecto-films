@@ -13,35 +13,41 @@ header {
     margin: 0em;
 }
 
-.navdiv {
-    width: 100%s;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .imgnav {
     width: 8em;
-    margin: 0px 3em 0px 3em;
+    margin: 0px 0em 0px 3em;
+}
+
+ul {
+    list-style: none;
 }
 
 .links a {
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 600;
     color: white;
     text-decoration: none;
-    margin: 0 0.3em 0 0.3em;
+    text-transform: uppercase;
+    margin: 0em 1.2em;
+    padding: 0.6em;
 }
 
 
-.link:hover {
-list-style:none;
-}
-
-.link:hover {
-    color: rgb(184, 184, 184);
+.links a:hover {
+    color: rgba(0, 84, 163, 0.787);
     text-decoration: none;
     transition: .1s;
+}
+
+
+.link-active a {
+    color: rgba(0, 132, 255, 0.787);
+    border-bottom: 1px rgba(0, 132, 255, 0.787) solid;
+}
+
+
+.link-active:before {
+    border: none;
 }
 
 .search {
@@ -62,8 +68,12 @@ input[type=text]:focus {
     transition: 0.4s ease-in-out;
 }
 
-.profile {
-    
+#account {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    margin: 0 05em 0 0.3em;
 }
 
 
@@ -83,16 +93,16 @@ input[type=text]:focus {
 
 
 @media only screen and (min-width: 768px) {
-    
-nav {
-    display: block;
-    font-size: 0.9em;
-}
 
-.navdiv{
-    justify-content: space-around;
-    align-items: center;
-}
+    nav {
+        display: block;
+        font-size: 0.9em;
+    }
+
+    .navdiv {
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
 }
@@ -109,7 +119,7 @@ nav {
         padding: 0em;
     }
 
-    .navdiv{
+    .navdiv {
         width: auto;
         justify-content: space-around;
         align-items: center;
@@ -120,11 +130,11 @@ nav {
         margin: 0px 3em 0px 0%;
     }
 
-    .links{
+    .links {
         display: flex;
         flex-direction: row;
     }
-    
+
     .search {
         width: 50%;
         display: flex;
@@ -150,4 +160,3 @@ nav {
     }
 
 }
-
