@@ -1,0 +1,23 @@
+{
+
+    "index": {
+        "meta_title": "PELICULAS- RECOMENDACIONES",
+        "meta_description": "ESTA ES LA DESCRIPCION"
+    },
+
+    "categories": {
+        "meta-title": "",
+        "meta-description": ""
+    },
+
+    "movieDetail": {
+        "meta-title": "",
+        "meta-description": ""
+    },
+
+    "SERIEDetail": {
+        "meta-title": "",
+        "meta-description": ""
+    }
+
+}

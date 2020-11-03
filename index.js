@@ -1,3 +1,28 @@
+/* LLAMAR JSON METAS-SEO */
+fetch('SEO-Y-DATOS/metas-seo.json')
+
+    .then(function (response) {
+
+        return response.json();
+
+    })
+
+    .then(function (information) {
+
+        /* CAMBIAR METAS-SEO */
+
+        console.log(information);
+
+        var meta_title = document.querySelector("#meta_title");
+        var meta_description = document.querySelector("#meta_description");
+
+        meta_title.innerHTML = ` ${information.index.meta_title} `;
+
+        meta_description.innerHTML = ` ${information.index.meta_description} `;
+
+
+    })
+
 window.onload = function () {
     console.log('JS Conectado Correctamente');
 
@@ -15,7 +40,7 @@ window.onload = function () {
     }]
 
 
-    /* Datos Peliculas */
+    /* Datos CATEGORIAS */
 
     let CategoriesData = [{
         "id": 1,
@@ -32,6 +57,27 @@ window.onload = function () {
     }]
 
 
+  /* Datos Peliculas */
+
+  let moviesData = [{
+    "id": 1,
+}, {
+    "id": 2,
+}, {
+    "id": 3,
+}, {
+    "id": 4,
+}, {
+    "id": 5,
+}, {
+    "id": 6,
+}, {
+    "id": 7,
+}, {
+    "id": 8,
+}, {
+    "id": 9,
+}]
 
 
     /*  Agregar Peliculas al Carrusel */
@@ -70,43 +116,9 @@ window.onload = function () {
 
                         <div class="uk-slider-container">
 
-                            <ul class="uk-slider-items">
+                            <ul class="uk-slider-items peliculas">
 
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
-
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
-
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
-
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
-
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
-
-                            <li class="ext">
-                            <div class="eachmovie">
-                                <a href="movieDetail.html"><span uk-spinner="ratio: 4.5"></span></a>
-                            </div>
-                            </li>
+                        
                             </ul>
                         </div>
 
@@ -121,5 +133,23 @@ window.onload = function () {
     
 `
     });
+
+    var peliculas = document.querySelector(".peliculas")
+
+
+    moviesData.forEach(element => {
+
+        peliculas.innerHTML += `
+    
+            <li class="ext">
+              <div class="eachmovie">
+                  <a href="movieDetail.html">${element.id}</a>
+               </div>
+             </li>
+
+    
+`
+    });
+
 
 }
