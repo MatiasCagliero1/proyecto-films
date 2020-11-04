@@ -26,7 +26,7 @@ fetch('SEO-Y-DATOS/metas-seo.json')
 window.onload = function () {
     console.log('JS Conectado Correctamente');
 
-    /* Datos Carrusel */
+    /* Imágenes Carrusel */
 
     let carruselimg = [{
         "id": 1,
@@ -97,7 +97,7 @@ window.onload = function () {
 
 
 
-    /*  Agregar Peliculas al Section */
+    /*  Agregar Categorias al Section */
 
     var movies = document.querySelector(".movies-sliders")
 
@@ -133,6 +133,10 @@ window.onload = function () {
     
 `
     });
+
+
+    
+    /*  Agregar Peliculas al <ul> */
 
     var peliculas = document.querySelector(".peliculas")
 

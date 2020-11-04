@@ -6,10 +6,13 @@ body {
 
 /* Img Portada */
 .carrusel {
-  height: 18em;
   margin: 0%;
 }
 
+
+element.style {
+  min-height: 15em;
+}
 
 .carrusel:focus,
 .Slideshow:focus {
@@ -63,10 +66,6 @@ body {
 /* Icono Carga */
 svg {
   margin: 0%;
-}
-
-
-.uk-slidenav {
 }
 
 .uk-position-small {

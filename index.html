@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title id="meta_title">A CAMBIAR</title>
-    <meta id="meta_description" name="description" content="A CAMBIAR NUMERO 2"/>
+    <title id="meta_title"></title>
+    <meta id="meta_description" name="description" content="A CAMBIAR 2"/>
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
@@ -55,12 +55,15 @@
     <section>
 
         <!-- Carrusel -->
-        <div class="carrusel uk-visible-toggle uk-light uk-cover-container" tabindex="-1"
-            uk-slideshow="animation: push">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
 
-            <ul class="fotoscarrusel uk-slideshow-items ">
-
+            <ul class="uk-slideshow-items fotoscarrusel">
+    
             </ul>
+        
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
         </div>
 
         <!-- Peliculas -->
