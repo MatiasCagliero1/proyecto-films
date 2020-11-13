@@ -103,6 +103,31 @@ h4 {
 text-align: center;
   }
   
+  .creditos{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+
+  .creditos div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .creditos div h3{
+    font-size: 1.2em;
+    color: white;
+  }
+
+  .creditos img{
+    width: 40%;
+    margin-top: 1em;
+   
+  }
 
   .copyrigth {
     justify-content: center;

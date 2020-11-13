@@ -1,32 +1,24 @@
 /* LLAMAR JSON METAS-SEO */
 fetch('SEO-Y-DATOS/metas-seo.json')
-
     .then(function (response) {
-
         return response.json();
-
     })
 
     .then(function (information) {
-
         /* CAMBIAR METAS-SEO */
-
-        console.log(information);
-
         var meta_title = document.querySelector("#meta_title");
         var meta_description = document.querySelector("#meta_description");
 
+
         meta_title.innerHTML = ` ${information.index.meta_title} `;
-
         meta_description.innerHTML = ` ${information.index.meta_description} `;
-
-
     })
 
-window.onload = function () {
-    console.log('JS Conectado Correctamente');
 
-    /* Imágenes Carrusel */
+window.addEventListener('load', function () {
+
+
+    /* Imágenes DEL Carrusel 
 
     let carruselimg = [{
         "id": 1,
@@ -39,121 +31,103 @@ window.onload = function () {
         "ruta": "Assets/Peliculas/Franjas/The boys.jpg",
     }]
 
-
-    /* Datos CATEGORIAS */
-
-    let CategoriesData = [{
-        "id": 1,
-        "Categoria": "Recomedadas para Vos",
-    }, {
-        "id": 2,
-        "Categoria": "Top 4 en Argentina",
-    }, {
-        "id": 3,
-        "Categoria": "Tendencia de esta semana",
-    }, {
-        "id": 4,
-        "Categoria": "Ultimos Estrenos",
-    }]
-
-
-  /* Datos Peliculas */
-
-  let moviesData = [{
-    "id": 1,
-}, {
-    "id": 2,
-}, {
-    "id": 3,
-}, {
-    "id": 4,
-}, {
-    "id": 5,
-}, {
-    "id": 6,
-}, {
-    "id": 7,
-}, {
-    "id": 8,
-}, {
-    "id": 9,
-}]
-
-
-    /*  Agregar Peliculas al Carrusel */
+    /*  Agregar Peliculas al Carrusel
 
     var carrusel = document.querySelector(".fotoscarrusel")
 
     carruselimg.forEach(element => {
 
         carrusel.innerHTML += `
-
-    <li> <img src="${element.ruta}" alt=""></li>
-
-
-        `
+   
+       <li> <img src="${element.ruta}" alt=""></li>
+   
+           `
     });
+ */
 
+    /* NOBRES DE CATEGORIAS */
 
+    let CategoriesData = [{
+        "id": 1,
+        "Categoria": "Series para Maratonear",
+        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+    }, {
+        "id": 2,
+        "Categoria": "Top 4 en Argentina",
+        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+    }, {
+        "id": 3,
+        "Categoria": "Tendencia de esta semana",
+        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+    }, {
+        "id": 4,
+        "Categoria": "Ultimos Estrenos",
+        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+    }]
 
 
     /*  Agregar Categorias al Section */
 
-    var movies = document.querySelector(".movies-sliders")
-
+    var filas_categorias = document.querySelector(".movies-sliders")
 
     CategoriesData.forEach(element => {
 
-        movies.innerHTML += `
-    
-                  
-        <!--Movies Line ${element.id}-->
-                    <div class="moviesegment uk-card">
+        filas_categorias.innerHTML += `
 
-                    <h2 class="cat-title">${element.Categoria}</h2>
+              <!--Fila Numero${element.id}--!>
+                <div class="moviesegment uk-card">
+                <h2 class="cat-title">${element.Categoria}</h2>
+                <div class="moviesline" uk-slider>
+                    <div class="uk-slider-container">
 
-                    <div class="moviesline" uk-slider>
-
-                        <div class="uk-slider-container">
-
-                            <ul class="uk-slider-items peliculas">
-
+                        <ul class="uk-slider-items" id="peliculas"></ul>
                         
-                            </ul>
-                        </div>
-
-                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-                            uk-slider-item="previous"></a>
-                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                            uk-slider-item="next"></a>
-
                     </div>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
+            </div>
 
-    
+
 `
     });
 
+    /* AGREGAR PELICULAS */
 
-    
-    /*  Agregar Peliculas al <ul> */
-
-    var peliculas = document.querySelector(".peliculas")
+    var api_key = '637047833ce3a40c01c36c4fd05c9c57';
 
 
-    moviesData.forEach(element => {
 
-        peliculas.innerHTML += `
-    
-            <li class="ext">
-              <div class="eachmovie">
-                  <a href="movieDetail.html">${element.id}</a>
-               </div>
-             </li>
+    fetch(`${CategoriesData.API}`)
 
-    
+
+    fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}`)
+
+        .then(function (response) {
+            return response.json();
+        })
+
+        .then(function (information) {
+
+            console.log(information);
+
+
+            for (let index = 0; index < 5; index++) {
+                const element = information.results[index];
+
+                var peliculas = document.querySelectorAll("#peliculas")
+
+                peliculas.innerHTML += `
+
+       <li class="ext">
+         <div class="eachmovie">
+             <a href="movieDetail.html">${element.id}</a>
+             <img src="${element.backdrop_path}" alt="">
+          </div>
+        </li>
 `
-    });
+            }
 
+        })
 
-}
+})

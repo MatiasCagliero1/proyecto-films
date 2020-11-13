@@ -89,6 +89,48 @@ svg {
   display: none;
 }
 
+/* .hiddenext {
+  height: 0px ;
+  opacity: 0;
+}
+
+.ext:hover .hiddenext {
+  height: 150px ;
+  opacity: 1;
+} 
+
+.insidemovie {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #000;
+}
+
+
+.hiddenext h4 {
+  color: rgba(92, 92, 92, 0.911);
+  font-weight: 600;
+  background-color: rgb(119, 119, 119);
+  margin: 0%;
+}
+
+.hiddenext p {
+  background-color: chocolate;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.hiddenext article {
+  background-color: rgb(140, 11, 226);
+  font-weight: 600;
+}
+
+.movietext {
+  font-size: 5em;
+  font-weight: 300;
+  color: white;
+}
+*/
 
 @media only screen and (min-width: 768px) {}
 
