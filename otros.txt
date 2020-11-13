@@ -1,0 +1,20 @@
+  //BUSCADOR
+
+        var queryString = location.search; //te trae todo despues de el signo ?
+        var queryStringObj = new URLSearchParams(queryString); //Lo tranforma en un objeto
+        var busqueda = queryStringObj.get('#search');
+
+console.log(busqueda);
+
+        fetch(`https://api.themoviedb.org/3/search/company?api_key=${api_key}&page=1`)
+
+        .then(function (response) {
+            return response.json();
+        })
+
+        .then(function (information) {
+            console.log(information);
+
+
+
+        })

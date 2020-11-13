@@ -45,25 +45,28 @@ window.addEventListener('load', function () {
     });
  */
 
+
+
     /* NOBRES DE CATEGORIAS */
 
     let CategoriesData = [{
         "id": 1,
         "Categoria": "Series para Maratonear",
-        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+        "API": "https://api.themoviedb.org/3/movie?api_key=",
     }, {
         "id": 2,
         "Categoria": "Top 4 en Argentina",
-        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+        "API": "https://api.themoviedb.org/3/movie?api_key=",
     }, {
         "id": 3,
         "Categoria": "Tendencia de esta semana",
-        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+        "API": "https://api.themoviedb.org/3/movie?api_key=",
     }, {
         "id": 4,
         "Categoria": "Ultimos Estrenos",
-        "API": " 'https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}'",
+        "API": "https://api.themoviedb.org/3/movie?api_key=",
     }]
+
 
 
     /*  Agregar Categorias al Section */
@@ -86,22 +89,17 @@ window.addEventListener('load', function () {
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
-            </div>
-
-
-`
+            </div>`
     });
 
     /* AGREGAR PELICULAS */
 
     var api_key = '637047833ce3a40c01c36c4fd05c9c57';
 
+    CategoriesData.forEach(element => {
+    
 
-
-    fetch(`${CategoriesData.API}`)
-
-
-    fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}`)
+    fetch(`'${element.API}${api_key}'`)
 
         .then(function (response) {
             return response.json();
@@ -112,7 +110,7 @@ window.addEventListener('load', function () {
             console.log(information);
 
 
-            for (let index = 0; index < 5; index++) {
+            /* for (let index = 0; index < 5; index++) {
                 const element = information.results[index];
 
                 var peliculas = document.querySelectorAll("#peliculas")
@@ -127,7 +125,24 @@ window.addEventListener('load', function () {
         </li>
 `
             }
-
+ */
         })
+
+    });
+
+   
+
+
+    fetch('https://api.themoviedb.org/3/tv/71712-the-good-doctor/images?api_key=637047833ce3a40c01c36c4fd05c9c57')
+
+    .then(function (response) {
+        return response.json();
+    })
+
+    .then(function (information) {
+
+        console.log(information);
+
+    })
 
 })
