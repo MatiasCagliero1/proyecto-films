@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
             console.log(information);
 
 
-            /* for (let index = 0; index < 5; index++) {
+             for (let index = 0; index < 5; index++) {
                 const element = information.results[index];
 
                 var peliculas = document.querySelectorAll("#peliculas")
@@ -125,7 +125,6 @@ window.addEventListener('load', function () {
         </li>
 `
             }
- */
         })
 
     });
