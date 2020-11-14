@@ -4,28 +4,36 @@ body {
   margin: 0%;
 }
 
-#mainbody{
+#mainbody {
   height: 80vh;
 }
 
 /* Img Portada */
-.carrusel {
-  margin: 0%;
+.fotoscarrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 18em !important;
+  height: 5px;
 }
 
-
-element.style {
-  min-height: 15em;
+.img-carru{
+  object-fit: cover;
 }
 
-.carrusel:focus,
+.uk-slideshow-items>* {
+display: flex;
+justify-content: center;
+}
+
 .Slideshow:focus {
   border: none;
 }
 
+
 /* Movies */
 .moviesegment {
-  margin: 0em 0em 0em 2em ;
+  margin: 0em 0em 0em 2em;
 }
 
 .cat-title {
@@ -41,7 +49,9 @@ element.style {
 }
 
 .ext {
-  background-color: rgba(0, 0, 0, 0.527);
+  width: 19em;
+  padding: 0.5em;
+  background-color: rgb(230, 230, 230);
   border-radius: 8px 8px;
   margin: 0em 0.2em;
 }
@@ -51,17 +61,55 @@ element.style {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 19em;
+  max-width: 19em;
   height: 11rem;
 }
 
-.eachmovie:hover {
+.eachmovie img {
+  object-fit: cover;
+}
+
+.movie_info{
+  position: relative;
+}
+
+.movie_info h2 {
+  font-size: 1.5em;
+  margin: 0%;
+  margin-top: 0.2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.movie_info h2 :hover {
+  text-decoration: none;
+}
+
+.movie_info p {
+  color: black;
+  margin-top: 1em;
+  padding: 0%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+
+.
+/* .eachmovie:hover {
   transform: scale(1.08);
   transition: 0.5s;
   background: #000;
   border: 1px solid rgb(31, 31, 31);
   transition: .3s;
-}
+} */
 
 .eachmovie:focus {
   border: none;
@@ -81,12 +129,7 @@ svg {
 
 .uk-position-small:hover {
   color: rgb(26, 5, 218);
-  background: rgba(87, 87, 87, 0.164);
-}
-
-/* Ampliación Peliculas */
-.hiddenext {
-  display: none;
+  background: rgba(87, 87, 87, 0.74);
 }
 
 
