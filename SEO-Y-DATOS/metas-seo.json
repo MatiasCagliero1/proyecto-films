@@ -6,18 +6,18 @@
     },
 
     "categories": {
-        "meta-title": "",
-        "meta-description": ""
+        "meta_title": "",
+        "meta_description": ""
     },
 
     "movieDetail": {
-        "meta-title": "",
-        "meta-description": ""
+        "meta_title": "",
+        "meta_description": ""
     },
 
-    "SERIEDetail": {
-        "meta-title": "",
-        "meta-description": ""
+    "favoritos": {
+        "meta_title": "Favoriutos",
+        "meta_description": "Fav"
     }
 
 }

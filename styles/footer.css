@@ -4,8 +4,6 @@ footer {
   flex-direction: column;
   width: 100%;
   background: #0a0a0ad5;
-  padding: 1em;
-  margin-top: 1em;
   color: white;
 }
 
@@ -69,6 +67,34 @@ h4 {
   flex-wrap: wrap;
 }
 
+.creditos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2em;
+}
+
+
+.creditos div{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+margin-bottom: 1em;
+}
+
+.creditos div h3{
+  font-size: 1.2em;
+  color: white;
+}
+
+.creditos img{
+  width: 40%;
+  margin-top: 1em;
+ 
+}
 
 
 
@@ -90,7 +116,13 @@ h4 {
   .networks {
     flex-direction: row;
     justify-content: center;
-    margin: 0.9em 0px;
+    margin: 0em 0px;
+    margin-bottom: 2em;
+    padding: 0%;
+  }
+
+  .networks ul{
+    padding-left: 0px;
   }
 
   .rowalign {
@@ -104,30 +136,13 @@ text-align: center;
   }
   
   .creditos{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-
-  .creditos div{
+  width: 90%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
   }
   
-  .creditos div h3{
-    font-size: 1.2em;
-    color: white;
-  }
-
-  .creditos img{
-    width: 40%;
-    margin-top: 1em;
-   
-  }
 
   .copyrigth {
     justify-content: center;

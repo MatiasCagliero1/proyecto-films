@@ -20,8 +20,7 @@
     <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/button.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/footer.css">O    <link rel="stylesheet" href="favoritos.css">
 </head>
 
 <body>
@@ -34,91 +33,78 @@
             <img class="imgnav" src="Assets/logo.svg" alt="">
 
             <ul class="links">
-                <li class="link-active"><a href="index.html" class="link">Inicio</a></li>
+                <li><a href="index.html" class="link">Inicio</a></li>
                 <li><a href="categories.html" class="link">Categorias</a></li>
-                <li><a href="movieDetail.html" class="link">Peliculas</a></li>
-                <li><a href="serieDetail.html" class="link">Series</a></li>
+                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
             </ul>
 
-
-            <form class="icon" action="" method="post">
-                <input class="link" type="text" placeholder="Buscar" type="text" autofocus>
+            <form action="movieDetail.html" method="get" class="icon">
+                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
             </form>
 
             <ul class="links favorito-link">
-                <li><a class="favorito-link" href="#" >GUARDADOS</a> <img class="icon-fav" src="https://img2.freepng.es/20180320/vjq/kisspng-computer-icons-bookmark-favicon-the-noun-project-vector-icon-bookmark-5ab0c9efef38a6.2071366915215354719799.jpg" alt=""></li>
+                <li class="link-active"><a class="favorito-link" href="favoritos.html">favoritos</a>
+                    <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                </li>
             </ul>
 
         </nav>
     </div>
+
+       
     
     <section id="mainbody">
 
-        <!-- Carrusel 
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
-
-            <ul class="uk-slideshow-items fotoscarrusel">
-    
-            </ul>
-        
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-        
-        </div>
-        -->
-
-        <!-- Peliculas -->
-        <section class="movies-sliders">
+        <div class="favoritos-general">
               
-        </section>
+           <div class="each-pelicula" id="">
+               <img id="movie.img" src="/Assets/Peliculas/Miniaturas/1d85c906f885f7198711e3c3562ad94f743a73fd1d3032a6bdf37971c5bb340f._UR1920,1080_RI_SX356_FMwebp_.webp" alt="">
+               <h3 id="movie.title">Titulo</h3>
+               <button>Eliminar de Favoritos</button>
+           </div>
+        </div>
 
     </section>
 
 
-    <!--Footer-->
     <footer>
-
         <h3>Nosotros</h3>
-
         <ul class="networks">
-            <li><a href="https://www.instagram.com/"> <img class="eachnetwork" src="Assets/Icons/Instagram.svg"
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/Instagram.svg"
                         alt="Icono-Instagram"></a></li>
-            <li><a href="https://www.facebook.com/"> <img class="eachnetwork" src="Assets/Icons/Facebook.svg"
+            <li><a href="https://www.facebook.com"> <img class="eachnetwork" src="Assets/Icons/Facebook.svg"
                         alt="Icono-Instagram"></a></li>
-            <li><a href="https://www.instagram.com/"> <img class="eachnetwork" src="Assets/Icons/whatsapp.svg"
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/whatsapp.svg"
                         alt="Icono-Instagram"></a></li>
-            <li><a href="https://www.instagram.com/"> <img class="eachnetwork" src="Assets/Icons/Mail.svg"
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/Mail.svg"
                         alt="Icono-Instagram"></a></li>
         </ul>
 
         <div class="divisor"></div>
 
         <section class="rowalign">
-
-            <p>India Fourcade</p>
-
+            <!--  <p>India Fourcade</p> -->
             <p>Matias Cagliero</p>
-
             <p>Bruno Greco</p>
-
         </section>
 
-        <section class="">
-
-           <h3>Api por TMDB</h3>
-           <img src="" alt="">
-
-           <h3>Movie Rank</h3>
-           <img src="" alt="">
-
+        <section class="creditos">
+            <div>
+                <h3>APIS por TMDB</h3>
+                <img src="Assets/TMDT.png" alt="">
+            </div>
+            <div>
+                <h3>Web de Movie Rank</h3>
+                <img src="/Assets/Logotipo/Mesa de trabajo 3.svg" alt="">
+            </div>
         </section>
 
         <p class="copyrigth">
             © Copyrigth 2020 Movie Rank S.A.
         </p>
+
     </footer>
 
-    <!-- JavaSript -->
     <script src="index.js"></script>
 </body>
 

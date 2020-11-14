@@ -1,0 +1,18 @@
+
+/* Botón Whatsapp */
+.favcall {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+    padding: 1.2em;
+    color: rgb(36, 26, 26);
+    border: 1px white solid;
+    
+  }
+  
+  .favcall img {
+    width: 3em;
+  
+  }
