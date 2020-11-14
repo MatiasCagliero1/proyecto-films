@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
                     
                      peliculaszero.innerHTML += `
             <li class="ext">
-            <a class="movie_a" href="detalle.html" name="${element.id}">
+            <a class="movie_a" href="detalle.html?IdMovie=${element.id}">
                 <div class="eachmovie">
                     <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                     <a class="favcalladd" href="favoritos.html name="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos"></a>

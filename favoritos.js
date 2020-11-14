@@ -32,8 +32,8 @@ window.addEventListener('load', function () {
                 var general_fav = document.querySelector(".favoritos-general");
 
                 general_fav.innerHTML += `
-                <div class="each-pelicula" id="${element.id}">
-                <div class="imgclass">
+                <div class="each-pelicula">
+               <a class="imgclass" href="detalle.html?IdMovie=${element.id}">
                     <img id="movie.img" src="https://image.tmdb.org/t/p/w500${element.backdrop_path}"
                         alt="${element.title} Portada">
                 
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
                         <h3>${element.title}</h3>
                         <p>${element.overview}</p>
                     </div>
-                </div>
+                </a>
                 <button>Eliminar de Favoritos</button>
             </div>
 

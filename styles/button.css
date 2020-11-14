@@ -18,7 +18,7 @@
   }
 
   .favcalladd{
-    position: fixed;
+    position: absolute;
     right: 3%;
     bottom: 46%;
     background: rgb(0, 0, 0);

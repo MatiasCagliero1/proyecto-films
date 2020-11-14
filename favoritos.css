@@ -12,8 +12,7 @@ body {
 .favoritos-general{
   margin: 1em 0em;
   background-color: white;
-  box-sizing: ;
-  width: 90%;
+  width: 150vh;
 }
 
 .each-pelicula{
@@ -31,6 +30,10 @@ body {
   align-items: center;
 }
 
+.imgclass :hover{
+  text-decoration:none !important;
+}
+
 .each-pelicula IMG{
 object-fit: cover;
   }
@@ -41,8 +44,6 @@ margin: 1em 0 0em 1em;
 font-weight: 500;
 }
 
-
-
 .each-pelicula p{
   padding: 0em 2em;
   max-width: 30em;
@@ -51,9 +52,10 @@ font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;
+  color: #000;
   }
 
-  
+
 .each-pelicula button{
   background: #000;
   color: white;
