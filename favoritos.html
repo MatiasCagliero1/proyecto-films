@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="meta_title"></title>
+    <meta id="meta_description" name="description" content="A CAMBIAR 2" />
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
+
+    <!--Stylesheet-->
+    <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="favoritos.css">
+</head>
+
+<body>
+
+    <!--Barra Superior-->
+    <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
+
+            <img class="imgnav" src="Assets/logo.svg" alt="">
+
+            <ul class="links">
+                <li><a href="index.html" class="link">Inicio</a></li>
+                <li><a href="categories.html" class="link">Categorias</a></li>
+                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
+            </ul>
+
+            <form action="movieDetail.html" method="get" class="icon">
+                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
+            </form>
+
+            <ul class="links favorito-link">
+                <li class="link-active"><a class="favorito-link" href="favoritos.html">favoritos</a>
+                    <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+    <section id="mainbody">
+
+        <div class="favoritos-general">
+
+           
+        </div>
+
+
+        </div>
+    </section>
+
+
+    <footer>
+        <h3>Nosotros</h3>
+        <ul class="networks">
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/Instagram.svg"
+                        alt="Icono-Instagram"></a></li>
+            <li><a href="https://www.facebook.com"> <img class="eachnetwork" src="Assets/Icons/Facebook.svg"
+                        alt="Icono-Instagram"></a></li>
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/whatsapp.svg"
+                        alt="Icono-Instagram"></a></li>
+            <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/Mail.svg"
+                        alt="Icono-Instagram"></a></li>
+        </ul>
+
+        <div class="divisor"></div>
+
+        <section class="rowalign">
+             <p>India Fourcade</p>
+            <p>Matias Cagliero</p>
+            <p>Bruno Greco</p>
+        </section>
+
+        <section class="creditos">
+            <div>
+                <h3>APIS por TMDB</h3>
+                <img src="Assets/TMDT.png" alt="">
+            </div>
+            <div>
+                <h3>Web de Movie Rank</h3>
+                <img src="/Assets/Logotipo/Mesa de trabajo 3.svg" alt="">
+            </div>
+        </section>
+
+        <p class="copyrigth">
+            © Copyrigth 2020 Movie Rank S.A.
+        </p>
+
+    </footer>
+
+    <script src="favoritos.js"></script>
+</body>
+
+</html>

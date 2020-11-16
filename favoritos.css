@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(4, 5, 8, 0.904);
+  margin: 0%;
+}
+
+#mainbody{
+  display: flex;
+  justify-content: center;
+}
+
+.favoritos-general{
+  margin: 1em 0em;
+  background-color: white;
+  width: 150vh;
+}
+
+.each-pelicula{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.imgclass{
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgclass :hover{
+  text-decoration:none;
+}
+
+.each-pelicula IMG{
+object-fit: cover;
+  }
+
+.each-pelicula h3{
+font-size: 1.2em;
+margin: 1em 0 0em 1em;
+font-weight: 500;
+}
+
+.each-pelicula p{
+  padding: 0em 2em;
+  max-width: 30em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; 
+  -webkit-box-orient: vertical;
+  color: #000;
+  }
+
+
+.each-pelicula button{
+  background: #000;
+  color: white;
+  font-size: 1.3em;
+  padding: 0.6em;
+  width: 90%;
+  border: none;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+  .each-pelicula{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  .imgclass{
+  width: 20em;
+  display: flex;
+  flex-direction: row;
+}
+
+.each-pelicula h3{
+  width: 100%;
+  font-size: 1.5em;
+  margin: 0em 8em 0em 2em;
+  text-align: left;
+  }
+
+  .each-pelicula p{
+    padding: 0em 2em;
+  max-width: 30em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    }
+
+.each-pelicula button{
+  padding: 0.6em;
+  width: 20%;
+}
+
+}
