@@ -110,7 +110,7 @@ window.addEventListener("load", function () {
     /*   favoritos.push('Heloo');
       console.log('Array push',favoritos);
 
-
+par
 
         eachborrar.addEventListener("click", console.log('favoritosId'));
 

@@ -172,35 +172,30 @@ window.addEventListener('load', function () {
         })
 
     var addfavoritos = document.querySelector(`#mainbody`)
-    var favadd = document.querySelector(`.favcalladd`)
+    var favadd = document.querySelector(`.favcalladd`);
+    
+//Defino Array de Favoritos
+var favoritosId = ['524047','400160','524047']
 
-    var favoritosId = ['671039', '400160', '400160']
+
 
     //Agregar favoritos
         addfavoritos.addEventListener('click', function() {
-    
-            favoritosId.push(`45757`);
+            favoritosId.push(`456557`);
+        }) 
 
+  //Guardar en Storaje
             localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
              var favoritosvar = localStorage.getItem('favoritosstring');
-             
              console.log(favoritosvar);
-            }) 
-
-    //Sacar favoritos
-    /* addfavoritos.addEventListener('mousemove', function() {
-                
-        favoritosId.pop(``);
-
-        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-        var favoritosvar = localStorage.getItem('favoritosstring');
          
-         console.log(favoritosvar);
-        }) */
 
-
-
-
-
+//Cambio de Color
+var favsvg = document.querySelector(`.favcall`);
+if (favoritosId.length >= 1) {
+    favcall.style.backgroundColor = "red";
+}else{
+    favsvg.style.backgroundColor = "red";
+}
 
 })
