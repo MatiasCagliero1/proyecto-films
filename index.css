@@ -4,8 +4,8 @@ body {
   margin: 0%;
 }
 
-#mainbody {
-  height: 80vh;
+#mainbody{
+  height: auto;
 }
 
 /* Img Portada */
@@ -107,7 +107,7 @@ justify-content: center;
   transform: scale(1.08);
   transition: 0.5s;
   background: #000;
-  border: 1px solid rgb(31, 31, 31);
+  border: 1px solid ;
   transition: .3s;
 } */
 

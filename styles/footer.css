@@ -5,6 +5,7 @@ footer {
   width: 100%;
   background: #0a0a0ad5;
   color: white;
+  margin-top: 1em;
 }
 
 footer h3 {
@@ -116,7 +117,7 @@ margin-bottom: 1em;
   .networks {
     flex-direction: row;
     justify-content: center;
-    margin: 0em 0px;
+    margin: 1em 0px 0px 0px;
     margin-bottom: 2em;
     padding: 0%;
   }

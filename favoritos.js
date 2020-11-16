@@ -15,39 +15,74 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     })
 
 window.addEventListener('load', function () {
+    
+    var general_fav = document.querySelector(".favoritos-general");
+
+    var favoritosId = ['671039', '400160', '400160']
 
 
-    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
+    favoritosId.forEach(element => {
+        fetch(`https://api.themoviedb.org/3/movie/${element}?api_key=637047833ce3a40c01c36c4fd05c9c57`)
+            .then(function (response) {
+                return response.json();
+            })
 
-        
-    .then(function (response) {
-        return response.json();
-    })
-
-    .then(function (information) {
-
-            for (let i = 0; i < 6; i++) {
-                const element = information.results[i];
-
-                var general_fav = document.querySelector(".favoritos-general");
+            .then(function (information) {
 
                 general_fav.innerHTML += `
                 <div class="each-pelicula">
-               <a class="imgclass" href="detalle.html?IdMovie=${element.id}">
-                    <img id="movie.img" src="https://image.tmdb.org/t/p/w500${element.backdrop_path}"
-                        alt="${element.title} Portada">
+               <a class="imgclass" href="detalle.html?IdMovie=${information.id}">
+                    <img id="movie.img" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}"
+                        alt="${information.title} Portada">
                 
-                    <div class="each-info" id="${element.id}">
-                        <h3>${element.title}</h3>
-                        <p>${element.overview}</p>
+                    <div class="each-info" id="${information.id}">
+                        <h3>${information.title}</h3>
+                        <p>${information.overview}</p>
                     </div>
                 </a>
-                <button>Eliminar de Favoritos</button>
-            </div>
+                <button id="borrar">Eliminar de Favoritos</button>
+            </div> `
 
-            `
+            });
+    });
 
-            }
-        });
 
+    var deletefavoritos = document.querySelectorAll(`#borrar`);
+
+    //Borrar favoritos
+    deletefavoritos.addEventListener('click', function () {
+
+        favoritosId.pop(``);
+
+        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+
+        var favoritosvar = localStorage.getItem('favoritosstring');
+
+        console.log(favoritosvar);
+
+        fetch(`https://api.themoviedb.org/3/movie/${favoritosId}?api_key=637047833ce3a40c01c36c4fd05c9c57`)
+            .then(function (response) {
+                return response.json();
+            })
+
+            .then(function (information) {
+
+                general_fav.innerHTML += `
+                <div class="each-pelicula">
+               <a class="imgclass" href="detalle.html?IdMovie=${information.id}">
+                    <img id="movie.img" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}"
+                        alt="${information.title} Portada">
+                
+                    <div class="each-info" id="${information.id}">
+                        <h3>${information.title}</h3>
+                        <p>${information.overview}</p>
+                    </div>
+                </a>
+                <button id="borrar">Eliminar de Favoritos</button>
+            </div> `
+
+            });
+
+
+    })
 })
