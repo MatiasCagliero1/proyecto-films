@@ -19,7 +19,6 @@ fetch('SEO-Y-DATOS/metas-seo.json')
 
 window.addEventListener('load', function () {
 
-
     /* Imágenes DEL Carrusel */
 
     let carruselimg = [{
@@ -173,29 +172,28 @@ window.addEventListener('load', function () {
 
     var addfavoritos = document.querySelector(`#mainbody`)
     var favadd = document.querySelector(`.favcalladd`);
-    
-//Defino Array de Favoritos
-var favoritosId = ['524047','400160','524047']
 
-
+    //Defino Array de Favoritos
+    var favoritosId = [];
 
     //Agregar favoritos
-        addfavoritos.addEventListener('click', function() {
-            favoritosId.push(`456557`);
-        }) 
+    addfavoritos.addEventListener('click', function () {
+        favoritosId.push("524047");
 
-  //Guardar en Storaje
-            localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-             var favoritosvar = localStorage.getItem('favoritosstring');
-             console.log(favoritosvar);
-         
+        console.log(favoritosId);
+        //Guardar en Storaje
+        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+        var favoritosvar = localStorage.getItem('favoritosstring');
+        console.log(favoritosvar);
+   
 
-//Cambio de Color
-var favsvg = document.querySelector(`.favcall`);
-if (favoritosId.length >= 1) {
-    favcall.style.backgroundColor = "red";
-}else{
-    favsvg.style.backgroundColor = "red";
-}
+    //Cambio de Color
+    var favsvg = document.querySelector(`.favcall`);
 
+    if (favoritosId.length >= 1) {
+        favsvg.style.backgroundColor = "red";
+    } else {
+        favsvg.style.backgroundColor = "black";
+    }
+})
 })
