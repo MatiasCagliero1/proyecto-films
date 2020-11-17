@@ -86,18 +86,17 @@ window.addEventListener('load', function () {
         console.log(favoritosvar);
     })
 
+    
+    var mainbody = document.querySelector(`#mainbody`);
+
+  // Favoritoscon Array vacio
+  if (favoritosId.length <= 0) {
+    general_fav.style.display = "none";
+
+}else{
+    general_fav.style.display = "block";
+}
 
 
-
-    //Sacar favoritos
-    /* addfavoritos.addEventListener('mousemove', function() {
-                
-        favoritosId.pop(``);
-
-        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-        var favoritosvar = localStorage.getItem('favoritosstring');
-         
-         console.log(favoritosvar);
-        }) */
 
 })
