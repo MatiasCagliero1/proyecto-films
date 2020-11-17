@@ -65,7 +65,7 @@ window.addEventListener('load', function () {
 
                 peliculaszero.innerHTML += `
                 <li class="ext">
-                <a class="movie_a" href="detalle.html?tipo=peliculas&IdMovie=${element.id}">
+                <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                         <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
@@ -96,7 +96,7 @@ window.addEventListener('load', function () {
 
                 peliculasone.innerHTML += `
                 <li class="ext">
-                <a class="movie_a" href="detalle.html?tipo=peliculas&IdMovie=${element.id}">
+                <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                         <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
@@ -126,7 +126,7 @@ window.addEventListener('load', function () {
 
                 peliculastwo.innerHTML += `
                 <li class="ext">
-                <a class="movie_a" href="detalle.html?tipo=peliculas&IdMovie=${element.id}">
+                <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                         <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
@@ -155,7 +155,7 @@ window.addEventListener('load', function () {
 
                 peliculasthree.innerHTML += `
                     <li class="ext">
-                    <a class="movie_a" href="detalle.html?tipo=peliculas&IdMovie=${element.id}">
+                    <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                         <div class="eachmovie">
                             <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                             <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
@@ -180,22 +180,22 @@ window.addEventListener('load', function () {
     addfavoritos.addEventListener('click', function () {
         favoritosId.push("524047");
 
-        console.log(favoritosId);
         //Guardar en Storaje
         localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
         var favoritosvar = localStorage.getItem('favoritosstring');
-        console.log(favoritosvar);
-   
-
-    //Cambio de Color Botón Favoritos
-    var favsvg = document.querySelector(`.favcall`);
-
-    if (favoritosId.length >= 1) {
-        favsvg.style.backgroundColor = "red";
-    } else {
-        favsvg.style.backgroundColor = "black";
-    }
+        colorfavoritos ();
 })
 
+function colorfavoritos (){
+  //Cambio de Color Botón Favoritos
+  var favsvg = document.querySelector(`.favcall`);
 
+  if (favoritosId.length >= 1) {
+      favsvg.style.backgroundColor = "red";
+  } else {
+      favsvg.style.backgroundColor = "black";
+  }
+}
+
+colorfavoritos ();
 })
