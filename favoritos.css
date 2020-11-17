@@ -65,6 +65,24 @@ font-weight: 500;
   border: none;
 }
 
+.nonefav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+h2{
+  color: white;
+  margin-bottom: 0.7em;
+}
+
+.nonefav p{
+  color: white;
+  text-align: center;
+  margin: 0%;
+  }
 
 @media only screen and (min-width: 1000px) {
 
@@ -102,6 +120,15 @@ font-weight: 500;
 .each-pelicula button{
   padding: 0.6em;
   width: 20%;
+}
+
+.nonefav{
+  margin: 1em;
+  margin: 4em 0em;
+}
+
+h2{
+  margin-bottom: 1.3em;
 }
 
 }

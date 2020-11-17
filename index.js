@@ -187,7 +187,7 @@ window.addEventListener('load', function () {
         console.log(favoritosvar);
    
 
-    //Cambio de Color
+    //Cambio de Color Botón Favoritos
     var favsvg = document.querySelector(`.favcall`);
 
     if (favoritosId.length >= 1) {
@@ -196,4 +196,6 @@ window.addEventListener('load', function () {
         favsvg.style.backgroundColor = "black";
     }
 })
+
+
 })
