@@ -10,14 +10,19 @@
         "meta_description": ""
     },
 
-    "movieDetail": {
+    "detalles": {
         "meta_title": "",
         "meta_description": ""
     },
 
     "favoritos": {
-        "meta_title": "Favoriutos",
-        "meta_description": "Fav"
+        "meta_title": "Tus Favoritos | Movie Rank",
+        "meta_description": "Mira tus favoritos por Movie Rank."
+    },
+
+    "search": {
+        "meta_title": "Buscar | Movie Rank",
+        "meta_description": "Buscar en Movie Rank."
     }
 
 }
