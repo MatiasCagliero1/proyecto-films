@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
     var nonsearch = document.querySelector(`.nosearch`);
 
     //SINO BUSCASTE o No
-    if (busqueda == "") {
+    if (busqueda === null | busqueda === "") {
 
         console.log("No escribiste nada");
         busquedasection.style.display = "none";
@@ -45,33 +45,29 @@ window.addEventListener('load', function () {
             })
 
             .then(function (information) {
-                console.log(information);
 
-                information.results.forEach(element => {
-                    busquedasection.innerHTML += `
-                    
-                    <div class="each-info" id="${element.id}">
-                    <h3>${element.name}</h3>
-                </div>
-            <a class="imgclass" href="detalles.html?IdMovie=${element.id}">
-            <button>Ver Detalle</button>
-        </a> `
-                });
-
-                //SI NO HAY RESULTADOS
-                if (information.length <= 0) {
-                    nonsearch.style.display = "none";
+                // Si el Array Está vacio
+                if (information.results.length <= 0) {
+                    busquedasection.style.display = "none";
                     nonsearch.innerHTML = `
             <h2>¡No se ha encontrado resultados!</h2>
             <p>Podés probar denuevo con otro termino de busqueda.</p>`
                 } else {
                     nonsearch.style.display = "block";
+
+                    information.results.forEach(element => {
+                        busquedasection.innerHTML += `
+                    <div class="each-pelicula">
+                    <div class="each-info" id="${element.id}">
+                    <h3>${element.name}</h3>
+                </div>
+                <a class="imgclass" href="detalles.html?IdMovie=${element.id}">
+                    <button>Ver Detalle</button>
+                </a>
+            </div>`
+                    });
                 }
-
-
-
             });
     };
-
 
 })

@@ -73,6 +73,10 @@ justify-content: center;
   position: relative;
 }
 
+h2{
+  text-transform: capitalize;
+}
+
 .movie_info h2 {
   font-size: 1.5em;
   margin: 0%;
