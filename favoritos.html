@@ -26,12 +26,12 @@
 
 <body>
 
-    <!--Barra Superior-->
+       <!--Barra Superior-->
     <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 
         <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
 
-            <img class="imgnav" src="Assets/logo.svg" alt="">
+            <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
 
             <ul class="links">
                 <li><a href="index.html" class="link">Inicio</a></li>
@@ -39,13 +39,15 @@
                 <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
             </ul>
 
-            <form action="movieDetail.html" method="get" class="icon">
+
+            <form action="search.html" method="get" class="icon">
                 <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
             </form>
 
             <ul class="links favorito-link">
-                <li class="link-active"><a class="favorito-link" href="favoritos.html">favoritos</a>
-                    <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                <li><a class="favorito-link" href="favoritos.html">favoritos
+                        <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                    </a>
                 </li>
             </ul>
 

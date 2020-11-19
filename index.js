@@ -15,12 +15,9 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     })
 
 
-
-
 window.addEventListener('load', function () {
 
     /* Imágenes DEL Carrusel */
-
     let carruselimg = [{
         "id": 1,
         "ruta": "Assets/Peliculas/Franjas/alex_rider.jpg",
@@ -36,22 +33,16 @@ window.addEventListener('load', function () {
     }]
 
     /* Agregar Peliculas al Carrusel */
-
     var carrusel = document.querySelector(".fotoscarrusel")
 
     carruselimg.forEach(element => {
-
         carrusel.innerHTML += `
-   
        <li><img class="img-carru" src="${element.ruta}" alt=""></li>
-   
-           `
+    `
     });
 
 
-
     /* AGREGAR PELICULAS 1*/
-
     fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
             return response.json();
@@ -82,7 +73,6 @@ window.addEventListener('load', function () {
 
 
     /* AGREGAR PELICULAS 2*/
-
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
             return response.json();
@@ -111,8 +101,8 @@ window.addEventListener('load', function () {
             }
         })
 
-    /* AGREGAR PELICULAS 3*/
 
+    /* AGREGAR PELICULAS 3*/
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
             return response.json();
@@ -141,6 +131,7 @@ window.addEventListener('load', function () {
             }
         })
 
+
     /* AGREGAR PELICULAS 4*/
     fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
@@ -151,7 +142,6 @@ window.addEventListener('load', function () {
 
             for (let i = 0; i < 20; i++) {
                 const element = information.results[i];
-
 
                 peliculasthree.innerHTML += `
                     <li class="ext">
@@ -177,14 +167,15 @@ window.addEventListener('load', function () {
     var favoritosId = [];
 
     //Agregar favoritos
-    addfavoritos.addEventListener('click', function () {
-        favoritosId.push("524047");
+    addfavoritos.addEventListener('click', function () {  //Cambiar addfavoritos por favadd
+        favoritosId.push("732670"); //
 
         //Guardar en Storaje
         localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
         var favoritosvar = localStorage.getItem('favoritosstring');
         colorfavoritos ();
 })
+
 
 function colorfavoritos (){
   //Cambio de Color Botón Favoritos
@@ -198,4 +189,5 @@ function colorfavoritos (){
 }
 
 colorfavoritos ();
+
 })

@@ -16,36 +16,33 @@
 
 <body>
 
-    <!--Barra Superior-->
-    <header>
-        <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+       <!--Barra Superior-->
+       <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 
-            <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
-    
-                <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
-    
-                <ul class="links">
-                    <li><a href="index.html" class="link">Inicio</a></li>
-                    <li class="link-active"><a href="categories.html" class="link">Categorias</a></li>
-                    <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
-                </ul>
-    
-    
-                <form action="movieDetail.html" method="get" class="icon">
-                    <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
-                </form>
-    
-                <ul class="links favorito-link">
-                    <li><a class="favorito-link" href="favoritos.html">favoritos
-                            <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
-                        </a>
-                    </li>
-                </ul>
-    
-            </nav>
-        </div>
+        <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
 
-    </header>
+            <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
+
+            <ul class="links">
+                <li class="link-active"><a href="index.html" class="link">Inicio</a></li>
+                <li><a href="categories.html" class="link">Categorias</a></li>
+                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
+            </ul>
+
+
+            <form action="search.html" method="get" class="icon">
+                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
+            </form>
+
+            <ul class="links favorito-link">
+                <li><a class="favorito-link" href="favoritos.html">favoritos
+                        <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
 
 
     <section>
