@@ -163,9 +163,12 @@ window.addEventListener('load', function () {
     var addfavoritos = document.querySelector(`#mainbody`)
     var favadd = document.querySelector(`.favcalladd`);
 
-    //Defino Array de Favoritos
-    var favoritosId = [];
+     //Cargar favoritos del Storaje
+     var favoritosvar = localStorage.getItem('favoritosstring');
+     var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
+     console.log(favoritosId);
 
+    
     //Agregar favoritos
     addfavoritos.addEventListener('click', function () {  //Cambiar addfavoritos por favadd
         favoritosId.push("732670"); //
@@ -174,6 +177,7 @@ window.addEventListener('load', function () {
         localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
         var favoritosvar = localStorage.getItem('favoritosstring');
         colorfavoritos ();
+        console.log(favoritosId);
 })
 
 

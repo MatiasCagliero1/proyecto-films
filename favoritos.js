@@ -47,26 +47,31 @@ window.addEventListener('load', function () {
 
                     // Botón de Borrar favoritos
                     var deletefavoritos = document.querySelector(`#borrar`);
-                    console.log(deletefavoritos);
+                    // console.log(deletefavoritos);
                 });
         });
     };
-    
+
     cargararray();
 
 
     // Borrar favoritos tocando el botón
-    general_fav.addEventListener("click", function () {
-        favoritosId.pop(``); //REMPLAZAR PARA SACAR EN FINNCÓN DE ESE ID
+    function botónerrase() {
+        general_fav.addEventListener("click", function () {
+            favoritosId.pop(``); //REMPLAZAR PARA SACAR EN FINNCÓN DE ESE ID
 
-      general_fav.innerHTML =  '' ; // BORRA TODAS LAS PELICULAS
+            general_fav.innerHTML = ''; // BORRA TODAS LAS PELICULAS
 
-        if (favoritosId.length >= 1) {  //CARGA TODO EL ARRAY OTRA VEZ
-             cargararray();
-        }
-        nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE
-    })
+            if (favoritosId.length >= 1) { //CARGA TODO EL ARRAY OTRA VEZ
+                cargararray();
+                savefavoritos();
+            }
+            nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE
+            savefavoritos();
+        })
+    }
 
+    botónerrase ();
 
     // Favoritoscon Array vacio
     var favnone = document.querySelector(`.nonefav`);
@@ -85,7 +90,9 @@ window.addEventListener('load', function () {
     nonefav();
 
     // Guardar Array final en Storaje
-    localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-    var favoritosvar = localStorage.getItem('favoritosstring');
-    console.log(favoritosvar);
+    function savefavoritos() {
+        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+        var favoritosvar = localStorage.getItem('favoritosstring');
+        console.log(favoritosvar);
+    }
 })
