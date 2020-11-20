@@ -12,13 +12,32 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.favoritos.meta_description} `;
     })
 
-
-window.addEventListener('load', function () {
-
+    
     //Cargar favoritos del Storaje
     var favoritosvar = localStorage.getItem('favoritosstring');
     var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
 
+
+
+    function sacarfavoritos() {
+        favoritosId.indexOf(this.id);
+
+        console.log(this.id);
+
+          //Agregar Los favoritos provenientes de la Index segun el Array
+    var general_fav = document.querySelector(".favoritos-general");
+
+        general_fav.innerHTML = ''; // BORRA TODAS LAS PELICULAS
+
+        if (favoritosId.length >= 1) { //CARGA TODO EL ARRAY OTRA VEZ
+            cargararray();
+            savefavoritos();
+        }
+        nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE
+        savefavoritos();
+    }
+
+window.addEventListener('load', function () {
 
     //Agregar Los favoritos provenientes de la Index segun el Array
     var general_fav = document.querySelector(".favoritos-general");
@@ -42,36 +61,29 @@ window.addEventListener('load', function () {
                         <p>${information.overview}</p>
                     </div>
                 </a>
-                <button id="borrar">Eliminar de Favoritos</button>
+                <button id="${information.id}" class="borrar" onclick="sacarfavoritos()">Eliminar de Favoritos</button>
             </div> `
 
-                    // Botón de Borrar favoritos
-                    var deletefavoritos = document.querySelector(`#borrar`);
-                    // console.log(deletefavoritos);
-                });
+                   
+                })
         });
+
     };
+
+   
 
     cargararray();
 
+    /*   // Botón de Borrar favoritos
+    var deletefavoritos = document.querySelectorAll(`.borrar`);
+
 
     // Borrar favoritos tocando el botón
-    function botónerrase() {
-        general_fav.addEventListener("click", function () {
-            favoritosId.pop(``); //REMPLAZAR PARA SACAR EN FINNCÓN DE ESE ID
-
-            general_fav.innerHTML = ''; // BORRA TODAS LAS PELICULAS
-
-            if (favoritosId.length >= 1) { //CARGA TODO EL ARRAY OTRA VEZ
-                cargararray();
-                savefavoritos();
-            }
-            nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE
-            savefavoritos();
-        })
-    }
-
-    botónerrase ();
+    deletefavoritos.forEach(element => {
+ */
+    /* 
+          
+        }); */
 
     // Favoritoscon Array vacio
     var favnone = document.querySelector(`.nonefav`);
