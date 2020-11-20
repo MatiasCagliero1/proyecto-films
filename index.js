@@ -15,6 +15,27 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     })
 
 
+var favoritosId
+
+function agregarfavoritos() {
+
+    if (favoritosId === undefined || favoritosId == null || favoritosId.length <= 0) {
+        favoritosId = []
+    }
+
+favoritosId.push();
+
+var favadd = document.querySelectorAll(`.favcalladd`);
+favadd.indexOf(this.id);
+console.log(potition);
+
+
+//Guardar en Storaje
+localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+var favoritosvar = localStorage.getItem('favoritosstring');
+/* colorfavoritos(); */
+}
+
 window.addEventListener('load', function () {
 
     /* Imágenes DEL Carrusel */
@@ -31,10 +52,8 @@ window.addEventListener('load', function () {
         "id": 4,
         "ruta": "Assets/Peliculas/Franjas/this_is_us.jpg",
     }]
-
     /* Agregar Peliculas al Carrusel */
     var carrusel = document.querySelector(".fotoscarrusel")
-
     carruselimg.forEach(element => {
         carrusel.innerHTML += `
        <li><img class="img-carru" src="${element.ruta}" alt=""></li>
@@ -42,6 +61,7 @@ window.addEventListener('load', function () {
     });
 
 
+    //AGREGAR PELICULAS
     /* AGREGAR PELICULAS 1*/
     fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
@@ -52,20 +72,18 @@ window.addEventListener('load', function () {
 
             for (let i = 0; i < 20; i++) {
                 const element = information.results[i];
-
-
                 peliculaszero.innerHTML += `
                 <li class="ext">
                 <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                        <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
                     </div>
                     <div class="movie_info">
                     <h2>${element.title}</h2>
                     <p>${element.overview}</p>
                     </div>
                 </a>
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
             </li>
                             `
             }
@@ -82,20 +100,18 @@ window.addEventListener('load', function () {
 
             for (let i = 0; i < 20; i++) {
                 const element = information.results[i];
-
-
                 peliculasone.innerHTML += `
                 <li class="ext">
                 <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                        <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
                     </div>
                     <div class="movie_info">
                     <h2>${element.title}</h2>
                     <p>${element.overview}</p>
                     </div>
                 </a>
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
             </li>
                             `
             }
@@ -112,22 +128,19 @@ window.addEventListener('load', function () {
 
             for (let i = 0; i < 20; i++) {
                 const element = information.results[i];
-
-
                 peliculastwo.innerHTML += `
                 <li class="ext">
                 <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
                     <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                        <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
                     </div>
                     <div class="movie_info">
                     <h2>${element.title}</h2>
                     <p>${element.overview}</p>
                     </div>
                 </a>
-            </li>
-                            `
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+            </li>     `
             }
         })
 
@@ -144,54 +157,49 @@ window.addEventListener('load', function () {
                 const element = information.results[i];
 
                 peliculasthree.innerHTML += `
-                    <li class="ext">
-                    <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
-                        <div class="eachmovie">
-                            <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                            <button class="favcalladd" id="${element.id}"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
-                        </div>
-                        <div class="movie_info">
-                        <h2>${element.title}</h2>
-                        <p>${element.overview}</p>
-                        </div>
-                    </a>
-                </li>
+                <li class="ext">
+                <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
+                    <div class="eachmovie"z>
+                        <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
+                    </div>
+                    <div class="movie_info">
+                    <h2>${element.title}</h2>
+                    <p>${element.overview}</p>
+                    </div>
+                </a>
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+            </li>
                                 `
             }
         })
 
-    var addfavoritos = document.querySelector(`#mainbody`)
-    var favadd = document.querySelector(`.favcalladd`);
 
-     //Cargar favoritos del Storaje
-     var favoritosvar = localStorage.getItem('favoritosstring');
-     var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
-     console.log(favoritosId);
 
-    
+
+    //Cargar favoritos del Storaje
+    var favoritosvar = localStorage.getItem('favoritosstring');
+    var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
+
+
     //Agregar favoritos
-    addfavoritos.addEventListener('click', function () {  //Cambiar addfavoritos por favadd
-        favoritosId.push("732670"); //
 
-        //Guardar en Storaje
-        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-        var favoritosvar = localStorage.getItem('favoritosstring');
-        colorfavoritos ();
-        console.log(favoritosId);
-})
+    /*    favadd.addEventListener('click', function () { //Cambiar addfavoritos por favadd
+
+         
+       }) */
 
 
-function colorfavoritos (){
-  //Cambio de Color Botón Favoritos
-  var favsvg = document.querySelector(`.favcall`);
+    /*  function colorfavoritos() {
+         //Cambio de Color Botón Favoritos
+         var favsvg = document.querySelector(`.favcall`);
 
-  if (favoritosId.length >= 1) {
-      favsvg.style.backgroundColor = "red";
-  } else {
-      favsvg.style.backgroundColor = "black";
-  }
-}
-
-colorfavoritos ();
-
+         if (favoritosId.length >= 1) {
+             favsvg.style.backgroundColor = "red";
+         } else {
+             favsvg.style.backgroundColor = "black";
+         }
+     } */
+    /* 
+        colorfavoritos();
+     */
 })
