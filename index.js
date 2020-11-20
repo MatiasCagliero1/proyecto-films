@@ -14,8 +14,16 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.index.meta_description} `;
     })
 
+//Pre Cargar Página
+var loadpage = document.querySelector(".loadpage");
+loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+
+
 
 window.addEventListener('load', function () {
+
+    loadpage.style.display="none";
+
 
     /* Imágenes DEL Carrusel */
     let carruselimg = [{
@@ -68,6 +76,8 @@ window.addEventListener('load', function () {
                 </a>
             </li>
                             `
+                            
+
             }
         })
 
@@ -157,6 +167,8 @@ window.addEventListener('load', function () {
                     </a>
                 </li>
                                 `
+
+                              
             }
         })
 

@@ -13,7 +13,15 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     })
 
 
+//Pre Cargar Página
+var loadpage = document.querySelector(".loadpage");
+loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+
+
+
 window.addEventListener('load', function () {
+
+    loadpage.style.display="none";
 
     // Captar busqueda de la url
     var queryString = location.search; //te trae todo despues de el signo ?
