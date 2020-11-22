@@ -12,6 +12,10 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.favoritos.meta_description} `;
     })
 
+   //Pre Cargar Página
+    var loadpage = document.querySelector(".loadpage");
+    loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+
 
 
 //Cargar favoritos del Storaje
@@ -96,3 +100,7 @@ function savefavoritos() {
     localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
     var favoritosvar = localStorage.getItem('favoritosstring');
 }
+
+window.addEventListener('load', function () {
+    loadpage.style.display="none";
+})

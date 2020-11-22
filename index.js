@@ -14,6 +14,11 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.index.meta_description} `;
     })
 
+       //Pre Cargar Página
+       var loadpage = document.querySelector(".loadpage");
+       loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+   
+   
 
 //Cargar favoritos del Storaje
 var favoritosvar = localStorage.getItem('favoritosstring');
@@ -59,6 +64,7 @@ function savefavoritos() {
 
 
 window.addEventListener('load', function () {
+    loadpage.style.display="none";
 
     /* Imágenes DEL Carrusel */
     let carruselimg = [{

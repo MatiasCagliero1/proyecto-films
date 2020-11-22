@@ -41,3 +41,18 @@
     width: 2.5em;
   
   }
+
+
+  
+/* Pre Cargar Página */
+
+.loadpage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+  .spin{
+    color: rgb(255, 255, 255);
+  }
