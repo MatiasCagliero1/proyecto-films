@@ -15,26 +15,48 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     })
 
 
-var favoritosId
-
-function agregarfavoritos() {
-
-    if (favoritosId === undefined || favoritosId == null || favoritosId.length <= 0) {
-        favoritosId = []
-    }
-
-favoritosId.push();
-
-var favadd = document.querySelectorAll(`.favcalladd`);
-favadd.indexOf(this.id);
-console.log(potition);
-
-
-//Guardar en Storaje
-localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+//Cargar favoritos del Storaje
 var favoritosvar = localStorage.getItem('favoritosstring');
-/* colorfavoritos(); */
+var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
+
+
+if (favoritosId === null) {
+    favoritosId = []
+} else {
+    favoritosId = favoritosId.filter(x => x !== null)
 }
+
+function agregarfavoritos(a) {
+
+    favoritosId.push(a);
+    savefavoritos();
+    colorfavoritos();
+}
+
+
+//Cambio de Color Botón Favoritos
+function colorfavoritos() {
+    var favsvg = document.querySelector(`.favcall`);
+
+    if (favoritosId.length >= 1) {
+        favsvg.style.backgroundColor = "red";
+    } else {
+        favsvg.style.backgroundColor = "black";
+    }
+}
+
+colorfavoritos();
+
+// Guardar Array final en Storaje
+function savefavoritos() {
+    localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+    var favoritosvar = localStorage.getItem('favoritosstring');
+}
+
+
+
+
+
 
 window.addEventListener('load', function () {
 
@@ -63,7 +85,7 @@ window.addEventListener('load', function () {
 
     //AGREGAR PELICULAS
     /* AGREGAR PELICULAS 1*/
-    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
             return response.json();
         })
@@ -83,7 +105,7 @@ window.addEventListener('load', function () {
                     <p>${element.overview}</p>
                     </div>
                 </a>
-        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
             </li>
                             `
             }
@@ -91,7 +113,7 @@ window.addEventListener('load', function () {
 
 
     /* AGREGAR PELICULAS 2*/
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=637047833ce3a40c01c36c4fd05c9c57')
+    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
         .then(function (response) {
             return response.json();
         })
@@ -111,7 +133,7 @@ window.addEventListener('load', function () {
                     <p>${element.overview}</p>
                     </div>
                 </a>
-        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
             </li>
                             `
             }
@@ -139,8 +161,9 @@ window.addEventListener('load', function () {
                     <p>${element.overview}</p>
                     </div>
                 </a>
-        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
-            </li>     `
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+            </li>
+                            `
             }
         })
 
@@ -159,7 +182,7 @@ window.addEventListener('load', function () {
                 peliculasthree.innerHTML += `
                 <li class="ext">
                 <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
-                    <div class="eachmovie"z>
+                    <div class="eachmovie">
                         <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
                     </div>
                     <div class="movie_info">
@@ -167,39 +190,11 @@ window.addEventListener('load', function () {
                     <p>${element.overview}</p>
                     </div>
                 </a>
-        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos()"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
+        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
             </li>
-                                `
+                            `
             }
         })
 
 
-
-
-    //Cargar favoritos del Storaje
-    var favoritosvar = localStorage.getItem('favoritosstring');
-    var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
-
-
-    //Agregar favoritos
-
-    /*    favadd.addEventListener('click', function () { //Cambiar addfavoritos por favadd
-
-         
-       }) */
-
-
-    /*  function colorfavoritos() {
-         //Cambio de Color Botón Favoritos
-         var favsvg = document.querySelector(`.favcall`);
-
-         if (favoritosId.length >= 1) {
-             favsvg.style.backgroundColor = "red";
-         } else {
-             favsvg.style.backgroundColor = "black";
-         }
-     } */
-    /* 
-        colorfavoritos();
-     */
 })

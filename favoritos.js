@@ -12,45 +12,66 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.favoritos.meta_description} `;
     })
 
-    
-    //Cargar favoritos del Storaje
-    var favoritosvar = localStorage.getItem('favoritosstring');
-    var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
 
 
+//Cargar favoritos del Storaje
+var favoritosvar = localStorage.getItem('favoritosstring');
+var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
+//return favoritosId.filter(["", null, NaN, undefined]);
 
-    function sacarfavoritos() {
-        favoritosId.indexOf(this.id);
+if (favoritosId === null) { 
+    favoritosId = []
+}
+else{
+    favoritosId = favoritosId.filter(x => x !== null)
+}
 
-        console.log(this.id);
+// Favoritoscon Array vacio
+var general_fav = document.querySelector(".favoritos-general");
+var favnone = document.querySelector(`.nonefav`);
 
-          //Agregar Los favoritos provenientes de la Index segun el Array
-    var general_fav = document.querySelector(".favoritos-general");
+function nonefav() {
+    if (favoritosId.length <= 0 || favoritosId == "") {
+        general_fav.style.display = "none";
+        favnone.innerHTML = `
+            <h2>¡Todavía no tenés favoritos!</h2>
+            <p>Podés agregarlo desde Inicio con el botón de favoritos a la derecha de la foto.</p>`
+    } else {
+        general_fav.style.display = "block";
+    }
+}
 
-        general_fav.innerHTML = ''; // BORRA TODAS LAS PELICULAS
+nonefav();
 
-        if (favoritosId.length >= 1) { //CARGA TODO EL ARRAY OTRA VEZ
-            cargararray();
-            savefavoritos();
-        }
-        nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE
+
+function sacarfavoritos(a) {
+
+    var position = favoritosId.indexOf(a)
+
+    delete favoritosId[position];
+
+    general_fav.innerHTML = '';
+
+    if (favoritosId.length >= 1) { //CARGA TODO EL ARRAY OTRA VEZ
+        cargararray();
         savefavoritos();
     }
 
-window.addEventListener('load', function () {
+    nonefav(); // HAY FAVORITOS?, SINO MOSTRAR MENSAJE 
+}
 
-    //Agregar Los favoritos provenientes de la Index segun el Array
-    var general_fav = document.querySelector(".favoritos-general");
 
-    function cargararray() {
-        favoritosId.forEach(element => {
-            fetch(`https://api.themoviedb.org/3/movie/${element}?api_key=637047833ce3a40c01c36c4fd05c9c57`)
-                .then(function (response) {
-                    return response.json();
-                })
+//Agregar Los favoritos provenientes de la Index segun el Array
 
-                .then(function (information) {
-                    general_fav.innerHTML += `
+function cargararray() {
+    favoritosId.forEach(element => {
+        fetch(`https://api.themoviedb.org/3/movie/${element}?api_key=637047833ce3a40c01c36c4fd05c9c57`)
+            .then(function (response) {
+                return response.json();
+            })
+
+            .then(function (information) {
+                general_fav.innerHTML += `
                 <div class="each-pelicula">
                <a class="imgclass" href="detalles.html?IdMovie=${information.id}">
                     <img id="movie.img" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}"
@@ -61,50 +82,17 @@ window.addEventListener('load', function () {
                         <p>${information.overview}</p>
                     </div>
                 </a>
-                <button id="${information.id}" class="borrar" onclick="sacarfavoritos()">Eliminar de Favoritos</button>
+                <button id="${information.id}" class="borrar" onclick="sacarfavoritos(${information.id})">Eliminar de Favoritos</button>
             </div> `
+            })
+    });
 
-                   
-                })
-        });
+};
 
-    };
+cargararray();
 
-   
-
-    cargararray();
-
-    /*   // Botón de Borrar favoritos
-    var deletefavoritos = document.querySelectorAll(`.borrar`);
-
-
-    // Borrar favoritos tocando el botón
-    deletefavoritos.forEach(element => {
- */
-    /* 
-          
-        }); */
-
-    // Favoritoscon Array vacio
-    var favnone = document.querySelector(`.nonefav`);
-
-    function nonefav() {
-        if (favoritosId.length <= 0) {
-            general_fav.style.display = "none";
-            favnone.innerHTML = `
-            <h2>¡Todavía no tenés favoritos!</h2>
-            <p>Podés agregarlo desde Inicio con el botón de favoritos a la derecha de la foto.</p>`
-        } else {
-            general_fav.style.display = "block";
-        }
-    }
-
-    nonefav();
-
-    // Guardar Array final en Storaje
-    function savefavoritos() {
-        localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-        var favoritosvar = localStorage.getItem('favoritosstring');
-        console.log(favoritosvar);
-    }
-})
+// Guardar Array final en Storaje
+function savefavoritos() {
+    localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+    var favoritosvar = localStorage.getItem('favoritosstring');
+}
