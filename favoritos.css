@@ -100,6 +100,10 @@ h2{
   flex-direction: row;
 }
 
+/* .movie_img{
+  min-width: auto;
+} */
+
 .each-pelicula h3{
   width: 100%;
   font-size: 1.5em;

@@ -14,9 +14,12 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.index.meta_description} `;
     })
 
-       //Pre Cargar Página
-       var loadpage = document.querySelector(".loadpage");
-       loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+     //Pre Cargar Página
+     var loadpage = document.querySelector(".loadpage");
+     loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+     var allbody = document.querySelector(".totalbody");
+     allbody.style.display="none";
+ 
    
    
 
@@ -65,6 +68,7 @@ function savefavoritos() {
 
 window.addEventListener('load', function () {
     loadpage.style.display="none";
+    allbody.style.display="block";
 
     /* Imágenes DEL Carrusel */
     let carruselimg = [{

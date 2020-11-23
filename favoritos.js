@@ -15,7 +15,8 @@ fetch('SEO-Y-DATOS/metas-seo.json')
    //Pre Cargar Página
     var loadpage = document.querySelector(".loadpage");
     loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
-
+    var allbody = document.querySelector(".totalbody");
+    allbody.style.display="none";
 
 
 //Cargar favoritos del Storaje
@@ -78,7 +79,7 @@ function cargararray() {
                 general_fav.innerHTML += `
                 <div class="each-pelicula">
                <a class="imgclass" href="detalles.html?IdMovie=${information.id}">
-                    <img id="movie.img" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}"
+                    <img id="movie_img" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}"
                         alt="${information.title} Portada">
                 
                     <div class="each-info" id="${information.id}">
@@ -103,4 +104,5 @@ function savefavoritos() {
 
 window.addEventListener('load', function () {
     loadpage.style.display="none";
+    allbody.style.display="block";
 })

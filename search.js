@@ -12,14 +12,17 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.search.meta_description} `;
     })
 
-       //Pre Cargar Página
-       var loadpage = document.querySelector(".loadpage");
-       loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
-   
-   
+        //Pre Cargar Página
+    var loadpage = document.querySelector(".loadpage");
+    loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
+    var allbody = document.querySelector(".totalbody");
+    allbody.style.display="none";
+
 
 window.addEventListener('load', function () {
+
     loadpage.style.display="none";
+    allbody.style.display="block";
 
     // Captar busqueda de la url
     var queryString = location.search; //te trae todo despues de el signo ?
@@ -59,12 +62,13 @@ window.addEventListener('load', function () {
             <h2>¡No se ha encontrado resultados!</h2>
             <p>Podés probar denuevo con otro termino de busqueda.</p>`
                 } else {
+                    
                     nonsearch.style.display = "block";
 
                     information.results.forEach(element => {
                         busquedasection.innerHTML += `
                     <div class="each-pelicula">
-                    <div class="each-info" id="${element.id}">
+                    <div class="each-info">
                     <h3>${element.name}</h3>
                 </div>
                 <a class="imgclass" href="detalles.html?IdMovie=${element.id}">
