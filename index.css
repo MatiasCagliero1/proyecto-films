@@ -14,9 +14,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 18em !important;
-  height: 5px;
 }
+
 
 .img-carru{
   object-fit: cover;
@@ -34,7 +33,7 @@ justify-content: center;
 
 /* Movies */
 .moviesegment {
-  margin: 0em 0em 0em 2em;
+  margin: 0em 0em 0em 1em;
 }
 
 .cat-title {
@@ -135,7 +134,19 @@ svg {
 }
 
 
-@media only screen and (min-width: 768px) {}
 
+@media only screen and (min-width: 1134px) {
+/* Movies */
+.moviesegment {
+  margin: 0em 0em 0em 2em;
+}
 
-@media only screen and (min-width: 1134px) {}
+/* Img Portada */
+.fotoscarrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 18em !important;
+  height: 5px;
+}
+}

@@ -7,7 +7,7 @@
     <title id="meta_title">Movie | Movie Rank </title>
 
     <!--Stylesheet-->
-    <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png"/>
+    <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
     <link rel="stylesheet" href="detalles.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -15,59 +15,61 @@
 </head>
 
 <body>
+    <div class="loadpage"></div>
 
-      <!--Barra Superior-->
-      <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <div class="totalbody">
 
-        <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
+        <!--Barra Superior-->
+        <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 
-            <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
+            <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
 
-            <ul class="links">
-                <li><a href="index.html" class="link">Inicio</a></li>
-                <li><a href="categories.html" class="link">Categorias</a></li>
-                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
-            </ul>
+                <img class="imgnav" id="Movie" src="Assets/logo.svg" alt="">
 
-
-            <form action="search.html" method="get" class="icon">
-                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
-            </form>
-
-            <ul class="links favorito-link">
-                <li><a class="favorito-link" href="favoritos.html">favoritos
-                        <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-    </div>
+                <ul class="links">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="categories.html" class="link">Categorias</a></li>
+                    <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
+                </ul>
 
 
-    <div class="titulopag">
+                <form action="search.html" method="get" class="icon">
+                    <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
+                </form>
 
-        <p class="nombrepeli">Detail</p>
+                <ul class="links favorito-link">
+                    <li><a class="favorito-link" href="favoritos.html">favoritos
+                            <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
 
-    </div>
-
-    <section class="containmovie">
-
-        <div>
-            <img src="https://dam.smashmexico.com.mx/wp-content/uploads/2018/04/24160210/lo-que-debes-recordar-avengers-infinity-war.jpg" alt="" class="foto">
+            </nav>
         </div>
-        <div class="divderecho">
-            <p class="nombremovie">Los Vengadores</p>
-            <p class="fechacreacion">Release Date: </p>
-            <div class="playmovie">
-            <img src="Assets/Icons/hamburger.svg" alt="" class="iconcorazon">
-            <img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon">
-            <img src="Assets/Icons/play-icon.svg" alt="" class="fotoplay">
-            <p class="iconplay">Play Trailer</p>
+
+
+        <div class="titulopag">
+
+            <p class="nombrepeli">Detail</p>
+
         </div>
-            <p class="duracion">Run Time: </p>
+
+        <section class="containmovie">
+
+            <div class="imagen"> </div>
+
+            <div class="divderecho">
+                <p class="nombremovie">Los Vengadores</p>
+                <p class="fechacreacion">Release Date: </p>
+                <div class="playmovie">
+                    <img src="Assets/Icons/hamburger.svg" alt="" class="iconcorazon">
+                    <button class="lolo"><img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon"></button>  
+                    <img src="Assets/Icons/play-icon.svg" alt="" class="fotoplay">
+                    <p class="iconplay">Play Trailer</p>
+                </div>
+                <p class="duracion">Run Time: </p>
             </div>
-        </div>
+    </div>
     </section>
 
     <section>
@@ -75,10 +77,10 @@
             <p class="descripcion">Overview: </p>
         </div>
     </section>
-   
 
 
-    
+
+
     <!--Footer-->
     <footer>
         <h3>Nosotros</h3>
@@ -96,7 +98,7 @@
         <div class="divisor"></div>
 
         <section class="rowalign">
-         <p>India Fourcade</p>
+            <p>India Fourcade</p>
             <p>Matias Cagliero</p>
             <p>Bruno Greco</p>
         </section>
@@ -116,7 +118,8 @@
             © Copyrigth 2020 Movie Rank S.A.
         </p>
     </footer>
-
+    </div>
     <script src="detalles.js"></script>
 </body>
+
 </html>
