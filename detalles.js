@@ -65,9 +65,9 @@ setTimeout(function(){
         .then(function (information) {
             nombremoviee.innerHTML = ` ${information.original_title} `;
             fechacreacion.innerHTML += ` ${information.release_date} `;
-            duracion.innerHTML += ` ${information.runtime} `;
+            duracion.innerHTML += ` ${information.runtime} minutes`;
             descripcion.innerHTML += `${information.overview}`;
-            img.innerHTML = `  <img src="https://image.tmdb.org/t/p/w500${information.backdrop_path}" alt="">`
+            img.innerHTML = `  <img class="foto" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}" alt="">`
         });
 
 
