@@ -63,7 +63,7 @@ setTimeout(function () {
             fechacreacion.innerHTML = `Release Date: ${information.release_date} `;
             duracion.innerHTML = `Run Time: ${information.runtime} minutes`;
             descripcion.innerHTML = `Overview: ${information.overview}`;
-            img.innerHTML = `  <img class="foto" src="https://image.tmdb.org/t/p/w500${information.poster_path}" alt="">`
+            img.innerHTML = `  <img class="foto" src="https://image.tmdb.org/t/p/w500${information.backdrop_path}" alt="">`
         });
 
 

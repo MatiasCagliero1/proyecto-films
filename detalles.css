@@ -4,7 +4,6 @@ body {
   margin: 0% 0% 0% 0%;
 }
 
-
 .titulopag {
   background-color: white;
   width: 100%;
@@ -19,15 +18,16 @@ body {
   padding-right: 20px;
   padding-bottom: 25px;
   margin-top: 50px;
+  color: black;
 }
 
 .containmovie {
   display: grid;
   grid-template-columns: 45% 45%;
-  grid-template-rows: 280px;
+  grid-template-rows: 250px;
   justify-content: space-around;
   width: 100%;
-  height: 280px;
+  height: 250px;
   margin-top: 50px;
   margin-bottom: 30px;
   background-color: white;
@@ -35,11 +35,10 @@ body {
 
 .foto {
   width: 150px;
-  height: 150px;
+  height: 250px;
   padding-top: 60px;
   padding-right: 10px;
   padding-bottom: 70px;
-  padding-left: 30px;
   border-right: solid black;
 }
 
@@ -50,6 +49,7 @@ body {
   padding-left: 5px;
   font-size: 8px;
   background-color: white;
+  color: black;
 }
 
 .nombremovie {
@@ -106,24 +106,26 @@ body {
 }
 
 .iconcorazon {
-  width: 20px;
-  height: 20px;
-  padding-left: 10px;
+  width: 30px;
+  height: 30px;
+  padding-left: 5px;
   padding-top: 7px;
   color: black;
 }
 
 .iconplay {
   font-size: x-small;
-  padding-top: 17px;
+  padding-top: 13px;
   margin: 0px;
   padding-left: 10px;
+  color: black;
 }
 
 .nombrepeli {
   font-size: x-large;
   padding-top: 40px;
   padding-left: 120px;
+  color: black;
 }
 
 .iconcorazon {
@@ -184,6 +186,7 @@ body {
     padding-right: 20px;
     padding-bottom: 20px;
     margin-top: 50px;
+    color: black;
   }
 
   .descripcion {
@@ -195,22 +198,25 @@ body {
     padding-left: 1px;
     font-size: medium;
     background-color: white;
+    color: black;
   }
 
   .nombrepeli {
     font-size: 40px;
     padding: 0px;
+    padding-top: 20px;
+    padding-right: 10px;
   }
 
   .containmovie {
-    height: 460px;
+    height: 420px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
 
   .foto {
-    width: 350px;
-    height: 300px;
+    width: 420px;
+    height: 420px;
     padding-top: 80px;
     padding-right: 20px;
     padding-bottom: 80px;
@@ -219,9 +225,9 @@ body {
 
   .nombremovie {
     font-size: 35px;
-    width: 280px;
+    width: 270px;
     height: 100px;
-    padding-top: 30px;
+    padding-top: 60px;
   }
 
   .fechacreacion {
@@ -261,17 +267,18 @@ body {
   }
 
   .iconcorazon {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     padding-left: 10px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     color: black;
   }
 
   .iconplay {
     font-size: large;
     padding-top: 28px;
+    color: black;
   }
   .lolo{
     background-color: white;
@@ -295,21 +302,21 @@ body {
   .nombrepeli {
     padding-top: 60px;
     padding-left: 550px;
+    color: black;
   }
 
   .containmovie {
-    height: 460px;
+    height: 420px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
 
   .foto {
     width: 500px;
-    height: 400px;
-    padding-top: 30px;
+    height: 420px;
+    padding-top: 60px;
     padding-right: 20px;
     margin-left: 15px;
-    padding-bottom: 32px;
     border-right: solid black;
   }
 
@@ -360,13 +367,14 @@ body {
     width: 50px;
     height: 50px;
     padding-left: 10px;
-    padding-top: 22px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
     color: black;
   }
 
   .iconplay {
     font-size: x-large;
+    color: black;
     padding-top: 30px;
   }
 
@@ -375,6 +383,7 @@ body {
     padding-left: 5px;
     padding-top: 20px;
     font-size: large;
+    color: black;
   }
  .lolo{
     background-color: white;
