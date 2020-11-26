@@ -4,7 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="meta_title">Movie | Movie Rank </title>
+
+    <title id="meta_title">Movie Rank: Ratings, Reviews, Mirá las Últimas Peliculas Acá...</title>
+    <meta id="meta_description" name="description" content="A CAMBIAR 2" />
+
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
 
     <!--Stylesheet-->
     <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
@@ -17,37 +27,29 @@
 
 <body>
     <div class="loadpage"></div>
-    
     <section id="mainbody">
 
-
         <!--Barra Superior-->
-    <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+            <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
+                <img class="imgnav" id="Movie" src="Assets/logo.svg" alt="">
+                <ul class="links">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li><a href="categories.html" class="link">Categorias</a></li>
+                    <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
+                </ul>
+                <form action="search.html" method="get" class="icon">
+                    <input class="link" type="text" placeholder="Buscar" type="text" name="search">
+                </form>
+                <ul class="links favorito-link">
+                    <li><a class="favorito-link" href="favoritos.html">favoritos
+                            <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
-
-            <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
-
-            <ul class="links">
-                <li class="link-active"><a href="index.html" class="link">Inicio</a></li>
-                <li><a href="categories.html" class="link">Categorias</a></li>
-                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
-            </ul>
-
-
-            <form action="search.html" method="get" class="icon">
-                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
-            </form>
-
-            <ul class="links favorito-link">
-                <li><a class="favorito-link" href="favoritos.html">favoritos
-                        <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-    </div>
 
 
         <div class="titulopag">
@@ -64,8 +66,10 @@
                 <p class="nombremovie">Los Vengadores</p>
                 <p class="fechacreacion">Release Date: </p>
                 <div class="playmovie">
-                    <button class="lolo"><img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon"></button>  
-                    <p class="iconplay">Add to favorites</p>
+                    <img src="Assets/Icons/hamburger.svg" alt="" class="iconcorazon">
+                    <button class="lolo"><img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon"></button>
+                    <img src="Assets/Icons/play-icon.svg" alt="" class="fotoplay">
+                    <p class="iconplay">Play Trailer</p>
                 </div>
                 <p class="duracion">Run Time: </p>
             </div>
