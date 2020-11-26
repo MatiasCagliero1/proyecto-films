@@ -9,7 +9,8 @@ body {
   justify-content: center;
 }
 
-.search{
+
+.favoritos-general{
   margin: 1em 0em;
   background-color: white;
   width: 150vh;
@@ -25,18 +26,27 @@ body {
 
 .imgclass{
   width: 90vw;
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.nosearch h3{
+.imgclass :hover{
+  text-decoration:none;
+}
+
+.each-pelicula IMG{
+object-fit: cover;
+  }
+
+.each-pelicula h3{
 font-size: 1.2em;
 margin: 1em 0 0em 1em;
 font-weight: 500;
 }
 
-.nosearch p{
+.each-pelicula p{
   padding: 0em 2em;
   max-width: 30em;
   overflow: hidden;
@@ -44,11 +54,11 @@ font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;
-  color: white;
+  color: #000;
   }
 
 
-.imgclass button{
+.each-pelicula button{
   background: #000;
   color: white;
   font-size: 1.3em;
@@ -56,6 +66,29 @@ font-weight: 500;
   width: 90%;
   border: none;
 }
+
+
+.nosearch {
+  margin: 2em 0em;
+  }
+
+.nosearch h3{
+  font-size: 1.2em;
+  margin: 1em 0 0em 1em;
+  font-weight: 500;
+  }
+  
+  .nosearch p{
+    padding: 0em 2em;
+    max-width: 30em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    color: white;
+    }
+  
 
 h2{
   color: white;
@@ -79,6 +112,33 @@ h2{
   flex-direction: row;
 }
 
+/* .movie_img{
+  min-width: auto;
+} */
+
+.each-pelicula h3{
+  width: 100%;
+  font-size: 1.5em;
+  margin: 0em 8em 0em 2em;
+  text-align: left;
+  }
+
+  .each-pelicula p{
+    padding: 0em 2em;
+  max-width: 30em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    }
+
+.each-pelicula button{
+  padding: 0.6em;
+  width: 20%;
+}
+
+
 .nosearch h3{
   width: 100%;
   font-size: 1.5em;
@@ -96,18 +156,10 @@ h2{
     -webkit-box-orient: vertical;
     }
 
-.imgclass button{
-  padding: 0.6em;
-  width: 15em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-
+    
 h2{
-  margin-top: 1em;
   margin-bottom: 1.3em;
 }
+
 
 }

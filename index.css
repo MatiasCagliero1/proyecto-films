@@ -133,7 +133,9 @@ svg {
   background: rgba(87, 87, 87, 0.74);
 }
 
-
+uk-hidden, [hidden] {
+  display: block !important;
+}
 
 @media only screen and (min-width: 1134px) {
 /* Movies */

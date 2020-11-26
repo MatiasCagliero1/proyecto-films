@@ -1,60 +1,63 @@
-
 /* Botón Whatsapp */
 .favcall {
-    position: fixed;
-    right: 5%;
-    bottom: 5%;
-    background: rgb(0, 0, 0);
-    border-radius: 50px;
-    padding: 1.2em;
-    color: rgb(36, 26, 26);
-    border: 1px white solid;
-    
-  }
-  
-  .favcall img {
-    width: 3em;
-  
-  }
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background: rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 1.2em;
+  color: rgb(36, 26, 26);
+  border: 1px white solid;
 
-  .favcalladd{
-    position: absolute;
-    right: 4%;
-    bottom: 43%;
-    background: rgb(0, 0, 0);
-    border-radius: 50px;
-    padding: 0.5em;
-    fill: red;
-    color: rgb(36, 26, 26);
-    border: 1px white solid;
-    
-  }
+}
 
-  .favcalladd:hover{
-    transform: scale(1.2);
-    transition: 0.2s;
-  }
-  
-  .favcalladd:active {
-    background-color: rgb(252, 29, 0);
-  }
-  
-  .favcalladd img {
-    width: 2.5em;
-  
-  }
+.favcall img {
+  width: 3em;
+}
+
+.favcalladd {
+  position: absolute;
+  right: 4%;
+  bottom: 43%;
+  background: rgb(0, 0, 0);
+  border-radius: 50px;
+  padding: 0.5em;
+  fill: red;
+  color: rgb(36, 26, 26);
+  border: 1px white solid;
+
+}
+
+.favcalladd:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+.favcalladd:active {
+  background-color: rgb(252, 29, 0);
+}
+
+.favcalladd img {
+  width: 2.5em;
+
+}
 
 
-  
+
 /* Pre Cargar Página */
 
-.loadpage{
+.loadpage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-  .spin{
-    color: rgb(255, 255, 255);
-  }
+.spin {
+  color: rgb(255, 255, 255);
+  margin-top: 5em;
+}
+
+.loadh2 {
+  color: white;
+}

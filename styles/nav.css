@@ -40,6 +40,9 @@ ul {
     text-transform: uppercase;
     margin: 0em 1.2em;
     padding: 0.6em;
+    display: flex;
+    align-items: center;
+
 }
 
 

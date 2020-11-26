@@ -10,93 +10,61 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         var meta_description = document.querySelector("#meta_description");
 
 
-        meta_title.innerHTML = ` ${information.index.meta_title} `;
-        meta_description.innerHTML = ` ${information.index.meta_description} `;
+        meta_title.innerHTML = ` ${information.categories.meta_title} `;
+        meta_description.innerHTML = ` ${information.categories.meta_description} `;
     })
+//TERMINE METAS
 
 
-    
-   //Pre Cargar Página
-   var loadpage = document.querySelector(".loadpage");
-   loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span><h2 class"loadh2">Cargando Pagina</h2>`
-   var allbody = document.querySelector(".totalbody");
-   allbody.style.display="none";
+var queryString = location.search; //te trae todo despues de el signo ?
+var queryStringObj = new URLSearchParams(queryString); //Lo tranforma en un objeto
+var idmovie = queryStringObj.get('IdMovie');
 
-   
+
+
+//Pre Cargar Página
+var loadpage = document.querySelector(".loadpage");
+loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span><h2 class"loadh2">Cargando Pagina</h2>`
+var allbody = document.querySelector("#mainbody");
+allbody.style.display = "none";
+
+
 
 //Cargar favoritos del Storaje
 var favoritosvar = localStorage.getItem('favoritosstring');
 var favoritosId = JSON.parse(window.localStorage.getItem('favoritosstring'));
-
 
 if (favoritosId === null) {
     favoritosId = []
 } else {
     favoritosId = favoritosId.filter(x => x !== null)
 }
-
+// Guardar Array final en Storaje
+function savefavoritos() {
+    localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
+    var favoritosvar = localStorage.getItem('favoritosstring');
+}
 function agregarfavoritos(a) {
-
     favoritosId.push(a);
     savefavoritos();
     colorfavoritos();
 }
 
 
-//Cambio de Color Botón Favoritos
-function colorfavoritos() {
-    var favsvg = document.querySelector(`.favcall`);
-
-    if (favoritosId.length >= 1) {
-        favsvg.style.backgroundColor = "red";
-    } else {
-        favsvg.style.backgroundColor = "black";
-    }
-}
-
-colorfavoritos();
-
-// Guardar Array final en Storaje
-function savefavoritos() {
-    localStorage.setItem("favoritosstring", JSON.stringify(favoritosId));
-    var favoritosvar = localStorage.getItem('favoritosstring');
-}
+//llamar html
+var movies = document.querySelector(".movies");
+var cattouch = document.querySelector(".cattouch");
 
 
+window.addEventListener('load', function () {
 
+    loadpage.style.display = "none";
+    allbody.style.display = "block";
 
+    
 
-setTimeout(function(){ 
-
-    loadpage.style.display="none";
-    allbody.style.display="block";
-
-    /* Imágenes DEL Carrusel */
-    let carruselimg = [{
-        "id": 1,
-        "ruta": "Assets/Peliculas/Franjas/alex_rider.jpg",
-    }, {
-        "id": 2,
-        "ruta": "Assets/Peliculas/Franjas/Pacto de Fuga.jpg",
-    }, {
-        "id": 3,
-        "ruta": "Assets/Peliculas/Franjas/The boys.jpg",
-    }, {
-        "id": 4,
-        "ruta": "Assets/Peliculas/Franjas/this_is_us.jpg",
-    }]
-    /* Agregar Peliculas al Carrusel */
-    var carrusel = document.querySelector(".fotoscarrusel")
-    carruselimg.forEach(element => {
-        carrusel.innerHTML += `
-       <li><img class="img-carru" src="${element.ruta}" alt=""></li>
-    `
-    });
-
-
-    //AGREGAR PELICULAS
-    /* AGREGAR PELICULAS 1*/
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=637047833ce3a40c01c36c4fd05c9c57')
+    function renovarfavoritos(IdMovie) {
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=637047833ce3a40c01c36c4fd05c9c57&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${IdMovie}`)
         .then(function (response) {
             return response.json();
         })
@@ -122,9 +90,7 @@ setTimeout(function(){
             }
         })
 
-
-    /* AGREGAR PELICULAS 2*/
-    fetch('https://api.themoviedb.org/3/trending/all/day?api_key=637047833ce3a40c01c36c4fd05c9c57')
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=637047833ce3a40c01c36c4fd05c9c57&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=2&with_genres=${IdMovie}`)
         .then(function (response) {
             return response.json();
         })
@@ -149,10 +115,7 @@ setTimeout(function(){
                             `
             }
         })
-
-
-    /* AGREGAR PELICULAS 3*/
-    fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=637047833ce3a40c01c36c4fd05c9c57')
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=637047833ce3a40c01c36c4fd05c9c57&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=3&with_genres=${IdMovie}`)
         .then(function (response) {
             return response.json();
         })
@@ -177,35 +140,8 @@ setTimeout(function(){
                             `
             }
         })
-
-
-    /* AGREGAR PELICULAS 4*/
-    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=637047833ce3a40c01c36c4fd05c9c57')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (information) {
-            var peliculasthree = document.querySelector('#peliculasthree')
-
-            for (let i = 0; i < 20; i++) {
-                const element = information.results[i];
-
-                peliculasthree.innerHTML += `
-                <li class="ext">
-                <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
-                    <div class="eachmovie">
-                        <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                    </div>
-                    <div class="movie_info">
-                    <h2>${element.title}</h2>
-                    <p>${element.overview}</p>
-                    </div>
-                </a>
-        <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
-            </li>
-                            `
-            }
-        })
-
-
-}, 0500);
+    }
+    renovarfavoritos(idmovie); 
+    
+    
+})
