@@ -21,11 +21,11 @@ function savefavoritos() {
 }
 
 
-//Pre Cargar Página
-var loadpage = document.querySelector(".loadpage");
-loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
-var allbody = document.querySelector(".totalbody");
-allbody.style.display = "none";
+   //Pre Cargar Página
+   var loadpage = document.querySelector(".loadpage");
+   loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span><h2 class"loadh2">Cargando Pagina</h2>`
+   var allbody = document.querySelector(".mainbody");
+   allbody.style.display="none";
 
 
 var nombremoviee = document.querySelector(".nombremovie");
@@ -39,7 +39,9 @@ var lolo = document.querySelector(".lolo");
 
 
 
-window.addEventListener('load', function () {
+
+setTimeout(function(){ 
+
     loadpage.style.display = "none";
     allbody.style.display = "block";
 
@@ -72,10 +74,14 @@ window.addEventListener('load', function () {
 
 
     lolo.addEventListener('click', function () {
-        favoritosId.push(idmovie);
+        
+    var idpelicula =  parseInt(idmovie)
+
+        favoritosId.push(idpelicula);
         savefavoritos();
+        
+        console.log(favoritosId);
         console.log(favoritosvar);
     })
 
-
-})
+}, 3000);

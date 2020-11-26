@@ -3,202 +3,207 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="/Assets/Logotipo/Mesa de trabajo 4@180x.png" />
-    <title>Categorias | Movie Rank </title>
+    <title id="meta_title">Categorias | Movie Rank</title>
+    <meta id="meta_description" name="description" content="A CAMBIAR 2" />
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/js/uikit-icons.min.js"></script>
+
 
     <!--Stylesheet-->
-    <link rel="shortcut icon" href="/Assets/Logotipo/Mesa de trabajo 4@180x.png" />
-    <link rel="stylesheet" href="/styles/nav.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/button.css">
+
     <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
+    <div class="loadpage"></div>
 
-       <!--Barra Superior-->
-       <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+    <section id="mainbody">
 
-        <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
+        <div class="header " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
 
-            <img class="imgnav" id="Movie"  src="Assets/logo.svg" alt="">
+            <nav class="navbar uk-width-1-1" uk-navbar="dropbar: true;">
 
-            <ul class="links">
-                <li class="link-active"><a href="index.html" class="link">Inicio</a></li>
-                <li><a href="categories.html" class="link">Categorias</a></li>
-                <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
-            </ul>
+                <img class="imgnav" id="Movie" src="Assets/logo.svg" alt="">
 
-
-            <form action="search.html" method="get" class="icon">
-                <input class="link" type="text" placeholder="Buscar" type="text" name="search" autofocus>
-            </form>
-
-            <ul class="links favorito-link">
-                <li><a class="favorito-link" href="favoritos.html">favoritos
-                        <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-    </div>
+                <ul class="links">
+                    <li><a href="index.html" class="link">Inicio</a></li>
+                    <li class="link-active"><a href="categories.html" class="link">Categorias</a></li>
+                    <li><a href="https://www.instagram.com" class="link">InsTAGRAM</a></li>
+                </ul>
 
 
-    <section>
+                <form action="search.html" method="get" class="icon">
+                    <input class="link" type="text" placeholder="Buscar" type="text" name="search">
+                </form>
 
-        <h2 class="cat-title"> CATEGORÍAS </h2>
+                <ul class="links favorito-link">
+                    <li><a class="favorito-link" href="favoritos.html">favoritos
+                            <img class="icon-fav" src="Assets/Icons/favorito.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
 
-        <!-- Categorias linea 1 -->
-        <div class="eachmovie">
-
-            <div>
-                <img src="Assets/Elconjuro.jpg" alt="" class="ext">
-                <h2 class="divcategorias">TERROR</h2>
-            </div>
-
-
-            <div>
-                <img src="Assets/Peliculas/Miniaturas/justgowithit.jpg" alt="" class="ext">
-                <h2 class="divcategorias">COMEDIA</h2>
-            </div>
-
-
-            <div>
-              <img src="assets/Peliculas/Miniaturas/intouchables.jpeg" alt="" class="ext">
-                <h2 class="divcategorias">DRAMA</h2>
-            </div>
-
-        </div>
-
-        <!-- Categorias linea 2 -->
-
-        <div class="eachmovie">
-
-            <div>
-                <img src="Assets/Peliculas/Miniaturas/Velvet.png" alt="" class="ext">
-                <h2 class="divcategorias">DRAMAS ESPAÑOLES</h2>
-            </div>
-
-            <div>
-                <img src="assets/Peliculas/Miniaturas/notebook.jpg" alt="" class="ext">
-                <h2 class="divcategorias">ROMANCES</h2>
-            </div>
-
-            <div>
-                <img src="assets/Peliculas/Miniaturas/lalaland.jpg" alt="" class="ext">
-                <h2 class="divcategorias">MUSICALES</h2>
-            </div>
-
-        </div>
-
-        <!-- Categorias linea 3 -->
-
-        <div class="eachmovie">
-
-            <div>
-                <img src="assets/Peliculas/Miniaturas/1917.jpeg" alt="" class="ext">
-                <h2 class="divcategorias">BÉLICAS</h2>
-            </div>
-
-            <div>
-                <img src="assets/Peliculas/Miniaturas/frozen.jpg"  class="ext" alt="">
-                <h2 class="divcategorias">INFANTILES</h2>
-            </div>
-
-            <div>
-             <img src="assets/Peliculas/Miniaturas/mazerunner.jpg"  class="ext" alt="">
-                <h2 class="divcategorias">ACCIÓN</h2>
-            </div>
-
+            </nav>
         </div>
 
 
-        <!-- Categoria elegida fila 1 -->
-        <div class="moviegroup">
+        <section class="bodyes">
 
-            <h2 class="tituloselec"> CATEGORÍA ELEGIDA</h2>
-
-            <div class="catline">
-
-                <div>
-
-                    <a href="movieDetail.html"> <img class="movies"
-                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                            alt="First Photo"></a>
-
-                </div>
+            <h2 class="titlepage">CATEGORÍAS</h2>
 
 
-                <div>
+            <div class="categorias">
 
-                    <a href="movieDetail.html"> <img class="movies"
-                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                            alt="First Photo"></a>
+                <a class="cattouch" href="?IdMovie=28">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/accion.jpg"  alt="">
+                        <h2 class="nombregenero">Action</h2>
+                    </div>
+                </a>
 
-                </div>
+                <a class="cattouch" href="?IdMovie=12">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/adventure.jpg"  alt="">
+                        <h2 class="nombregenero">Adventure</h2>
+                    </div>
+                </a>
 
-                <div>
+                <a class="cattouch" href="?IdMovie=35">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/comedy.jpg"alt="">
+                        <h2 class="nombregenero">Comedy</h2>
+                    </div>
+                </a>
 
-                    <a href="movieDetail.html"> <img class="movies"
-                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                            alt="First Photo"></a>
+                <a class="cattouch" href="?IdMovie=27">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/horror.jpg"  alt="">
+                        <h2 class="nombregenero">Horror</h2>
+                    </div>
+                </a>
 
+                <a class="cattouch" href="?IdMovie=10749">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/love.jpg"  alt="">
+                        <h2 class="nombregenero">Romance</h2>
+                    </div>
+                </a>
 
-                </div>
+                <a class="cattouch" href="?IdMovie=53">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/thriller.jpg"  alt="">
+                        <h2 class="nombregenero">Thriller</h2>
+                    </div>
+                </a>
 
-                <div>
+                <a class="cattouch" href="?IdMovie=9648">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/Mystery.jpg"  alt="">
+                        <h2 class="nombregenero">Mystery</h2>
+                    </div>
+                </a>
 
-                    <a href="movieDetail.html"> <img class="movies"
-                            src="/Assets/Peliculas/Miniaturas/1563791717_146941_1563803892_noticia_normal.jpg"
-                            alt="First Photo"></a>
+                <a class="cattouch" href="?IdMovie=36">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/History..jpg"  alt="">
+                        <h2 class="nombregenero">History</h2>
+                    </div>
+                </a>
 
-                </div>
-
+                <a class="cattouch" href="?IdMovie=10402">
+                    <div class="exten">
+                        <img src="Assets/Peliculas/Miniaturas/Music.jpg"  alt="">
+                        <h2 class="nombregenero">Music</h2>
+                    </div>
+                </a>
             </div>
-        </div>
-    </section>
 
-   <!--Footer-->
-    <footer>
-        <!--Redes Sociales-->
-        <h3>Redes Sociales</h3>
 
-        <section class="networks">
-            <a href="https://www.instagram.com/"> <img class="eachnetwork" href="google.com"
-                    src="https://static.wixstatic.com/media/da7ef6dd1302486c9a67baebe4b364bc.png/v1/fill/w_37,h_37,al_c,q_85,usm_0.66_1.00_0.01/da7ef6dd1302486c9a67baebe4b364bc.webp"
-                    alt="Icono-Instagram"></a>
-            <a href="https://www.facebook.com"> <img class="eachnetwork"
-                    src="https://static.wixstatic.com/media/e0678ef25486466ba65ef6ad47b559e1.png/v1/fill/w_37,h_37,al_c,q_85,usm_0.66_1.00_0.01/e0678ef25486466ba65ef6ad47b559e1.webp"
-                    alt="Icono-Facebook"> </a>
-        </section>
 
-        <!-- Contacto
-        <section class="rowalign">
-            <a href="https://wa.me/1168934321">WhatsApp: +54 9 11 6893-4321</a>
+            <section class="movies-sliders" id="generosmovies">
+                <div class="moviesegment uk-card">
 
-            <a href="https://wa.me/5491136112732">Atencion al Cliente: 4952-3468</a>
+                    <div class="moviesline" uk-slider>
+                        <div class="uk-slider-container">
+                            <ul class="uk-slider-items" id="peliculaszero"></ul>
+                        </div>
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                            uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                            uk-slider-item="next"></a>
+                    </div>
+                </div>
 
-            <a href="https://wa.me/5491136112732">Email: info@movierank.com</a>
-        </section> -->
 
-        <!-- Integrantes -->
-        <h4>Integrantes</h4>
-        <section class="rowalign">
+                <section class="movies-sliders">
+                    <div class="moviesegment uk-card">
 
-            <p>India Fourcade</p>
+                        <div class="moviesline" uk-slider>
+                            <div class="uk-slider-container">
+                                <ul class="uk-slider-items" id="peliculasone"></ul>
+                            </div>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-next uk-slider-item="next"></a>
 
-            <p>Matias Cagliero</p>
+                        </div>
+                    </div>
 
-            <p>Bruno Greco</p>
+                </section>
 
-        </section>
+                <footer>
+                    <h3>Nosotros</h3>
+                    <ul class="networks">
+                        <li><a href="https://www.instagram.com"> <img class="eachnetwork"
+                                    src="Assets/Icons/Instagram.svg" alt="Icono-Instagram"></a></li>
+                        <li><a href="https://www.facebook.com"> <img class="eachnetwork" src="Assets/Icons/Facebook.svg"
+                                    alt="Icono-Instagram"></a></li>
+                        <li><a href="https://www.instagram.com"> <img class="eachnetwork"
+                                    src="Assets/Icons/whatsapp.svg" alt="Icono-Instagram"></a></li>
+                        <li><a href="https://www.instagram.com"> <img class="eachnetwork" src="Assets/Icons/Mail.svg"
+                                    alt="Icono-Instagram"></a></li>
+                    </ul>
 
-        <!--FIN Contacto-->
-        <p class="copyrigth">
-            © Copyrigth 2020 Movie Rank S.A.
-        </p>
-    </footer>
+                    <div class="divisor"></div>
 
+                    <section class="rowalign">
+                        <p>India Fourcade</p>
+                        <p>Matias Cagliero</p>
+                        <p>Bruno Greco</p>
+                    </section>
+
+                    <section class="creditos">
+                        <div>
+                            <h3>APIS por TMDB</h3>
+                            <img src="Assets/TMDT.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Web de Movie Rank</h3>
+                            <img src="Assets/Logotipo/Mesa de trabajo 3.svg" alt="">
+                        </div>
+                    </section>
+
+                    <p class="copyrigth">
+                        © Copyrigth 2020 Movie Rank S.A.
+                    </p>
+                </footer>
+
+                </div>
+                <script src="categorias.js"></script>
 </body>
+
 </html>

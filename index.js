@@ -14,13 +14,14 @@ fetch('SEO-Y-DATOS/metas-seo.json')
         meta_description.innerHTML = ` ${information.index.meta_description} `;
     })
 
-     //Pre Cargar Página
-     var loadpage = document.querySelector(".loadpage");
-     loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span>`
-     var allbody = document.querySelector(".totalbody");
-     allbody.style.display="none";
- 
-   
+
+    
+   //Pre Cargar Página
+   var loadpage = document.querySelector(".loadpage");
+   loadpage.innerHTML += `<span class="spin" uk-spinner="ratio: 10"></span><h2 class"loadh2">Cargando Pagina</h2>`
+   var allbody = document.querySelector(".totalbody");
+   allbody.style.display="none";
+
    
 
 //Cargar favoritos del Storaje
@@ -65,8 +66,8 @@ function savefavoritos() {
 
 
 
+setTimeout(function(){ 
 
-window.addEventListener('load', function () {
     loadpage.style.display="none";
     allbody.style.display="block";
 
@@ -207,4 +208,4 @@ window.addEventListener('load', function () {
         })
 
 
-})
+}, 0500);
