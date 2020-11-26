@@ -4,6 +4,10 @@
    margin: 0%;
  }
 
+ a:hover{
+  text-decoration: none;
+   }
+  
  .titlepage {
    text-align: center;
    color: white;
@@ -36,7 +40,9 @@
    height: 15em;
    margin: 0%;
    object-fit: cover;
+   border-radius: 8px 8px;
  }
+
 
  .exten img:hover {
    transform: scale(1.09);
