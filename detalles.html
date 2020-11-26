@@ -18,11 +18,11 @@
 
     <!--Stylesheet-->
     <link rel="shortcut icon" href="Assets/Logotipo/Mesa de trabajo 4@180x.png" />
-    <link rel="stylesheet" href="detalles.css">
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/button.css">
     <link rel="stylesheet" href="styles/footer.css">
-
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="detalles.css">
 </head>
 
 <body>
@@ -63,11 +63,11 @@
             <div class="imagen"> </div>
 
             <div class="divderecho">
-                <p class="nombremovie">Los Vengadores</p>
+                <p class="nombremovie"></p>
                 <p class="fechacreacion">Release Date: </p>
                 <div class="playmovie">
                     <img src="Assets/Icons/hamburger.svg" alt="" class="iconcorazon">
-                    <button class="lolo"><img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon"></button>
+                    <button class="lolo" onclick="favoritos()"><img src="Assets/Icons/estrella.svg" alt="" class="iconcorazon"></button>
                     <img src="Assets/Icons/play-icon.svg" alt="" class="fotoplay">
                     <p class="iconplay">Play Trailer</p>
                 </div>
@@ -82,7 +82,19 @@
         </section>
 
 
-
+  <section class="movies-sliders">
+            <div class="moviesegment uk-card">
+                <h2 class="cat-title">Tambíen Te Pueden Interesar</h2>
+                <div class="moviesline" uk-slider>
+                    <div class="uk-slider-container">
+                        <ul class="uk-slider-items" id="peliculaszero"></ul>
+                    </div>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+                        uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+                        uk-slider-item="next"></a>
+                </div>
+            </div>
 
         <!--Footer-->
         <footer>

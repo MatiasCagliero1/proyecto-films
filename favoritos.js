@@ -50,10 +50,6 @@ nonefav();
 
 function sacarfavoritos(a) {
     var position = favoritosId.indexOf(a)
-
-    console.log(a);
-    
-    console.log(position);
     
     delete favoritosId[position];
 
@@ -108,7 +104,4 @@ window.addEventListener('load', function () {
 
     loadpage.style.display="none";
     allbody.style.display="block";
-
-    console.log(favoritosId);
-    console.log(favoritosvar);
 })
