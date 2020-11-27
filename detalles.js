@@ -67,33 +67,7 @@ setTimeout(function () {
         });
 
 
-    //AGREGAR PELICULAS
-    /* AGREGAR PELICULAS 1*/
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=637047833ce3a40c01c36c4fd05c9c57')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (information) {
-            var peliculaszero = document.querySelector('#peliculaszero')
-
-            for (let i = 0; i < 20; i++) {
-                const element = information.results[i];
-                peliculaszero.innerHTML += `
-            <li class="ext">
-            <a class="movie_a" href="detalles.html?tipo=peliculas&IdMovie=${element.id}">
-                <div class="eachmovie">
-                    <img src="https://image.tmdb.org/t/p/w500${element.backdrop_path}" alt="">
-                </div>
-                <div class="movie_info">
-                <h2>${element.title}</h2>
-                <p>${element.overview}</p>
-                </div>
-            </a>
-    <button class="favcalladd" id="${element.id}" onclick="agregarfavoritos(${element.id})"><img src="Assets/Icons/corazon.svg" alt="Add-Favoritos">
-        </li>
-                        `
-            }
-        })
+    
 
 }, 1000);
 
