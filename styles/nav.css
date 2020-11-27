@@ -11,7 +11,8 @@ header {
     flex-wrap: wrap;
     font-size: 0.8em;
     background: rgba(20, 20, 20, 0.918);
-    margin: 0em;max-height: 5em;
+    margin: 0em;
+    max-height: 5em;
 }
 
 .imgnav {
@@ -25,7 +26,7 @@ ul {
     padding: 0%;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,13 +92,13 @@ input[type=text]:focus {
     color: white;
 }
 
-.favorito-link{
-    display: none;
+.favorito-link {
+    display: none !important;
 }
 
-.icon-fav{
-width: 3em;
-display: none;
+.icon-fav {
+    width: 3em;
+    display: none;
 }
 
 
@@ -112,17 +113,16 @@ display: none;
         font-size: 0.9em;
     }
 
-    
     .imgnav {
         display: flex;
         width: 8em;
         margin: 0px 1em 0px 0%;
     }
-    
+
     .navbar {
         justify-content: space-around;
         align-items: center;
-     
+
     }
 
     .navdiv {
@@ -134,15 +134,15 @@ display: none;
         display: flex;
     }
 
-    .favorito-link{
-        display: inline-block;
+    .favorito-link {
+        display: flex !important;
     }
 
-    .icon-fav{
+    .icon-fav {
         display: inline-block;
         margin-left: 2.5em;
-        }
-        
+    }
+
 }
 
 @media only screen and (min-width: 1134px) {
@@ -162,7 +162,7 @@ display: none;
         align-items: center;
     }
 
-   
+
 
     .links {
         display: flex;
