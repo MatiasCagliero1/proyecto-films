@@ -1,4 +1,4 @@
-var queryString = location.search; //te trae todo despues de el signo ?
+var queryString = location.search; 
 var queryStringObj = new URLSearchParams(queryString); //Lo tranforma en un objeto
 var idmovie = queryStringObj.get('IdMovie');
 
