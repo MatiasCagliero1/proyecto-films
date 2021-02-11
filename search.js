@@ -18,10 +18,7 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     var allbody = document.querySelector(".totalbody");
     allbody.style.display="none";
 
-
-
     setTimeout(function(){ 
-
 
     loadpage.style.display="none";
     allbody.style.display="block";
