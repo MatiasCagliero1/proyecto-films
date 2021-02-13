@@ -7,11 +7,11 @@ fetch('SEO-Y-DATOS/metas-seo.json')
     .then(function (information) {
         /* CAMBIAR METAS-SEO */
         var meta_title = document.querySelector("#meta_title");
-        var meta_description = document.querySelector("#meta_description");
+        document.querySelector('meta[name="description"]').setAttribute(meta_description, _desc);
+
 
 
         meta_title.innerHTML = ` ${information.index.meta_title} `;
-        meta_description.innerHTML = ` ${information.index.meta_description} `;
     })
 
 
